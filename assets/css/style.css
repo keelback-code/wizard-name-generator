@@ -23,6 +23,10 @@ a:hover, a:focus {
     text-align: center;
 }
 
+.landing-header a {
+    text-decoration: none;
+}
+
 .landing-links {
     display: flex;
     justify-content: space-around;
@@ -31,3 +35,27 @@ a:hover, a:focus {
     margin: 0 300px;
 }
 /*media query for landing link, get rid of margin??*/
+
+
+/*Styling for Biscuit and Wildcard Mode pages*/
+
+.mode-header-text a {
+    text-decoration: none;
+}
+
+.site-header {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+
+.nav-bar ul {
+    list-style-type: none;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+}
+
+.nav-bar li {
+    padding: 20px;
+}
