@@ -4,16 +4,29 @@ wizardLastNames = ["Rumbles", "Gorgonmitre", "Jupiter", "Stardust", "Glass", "Bl
 document.addEventListener("DOMContentLoaded", function() {
 // all the event listener related things in here, all functions underneath
 
+    let biscuitRoll = document.getElementById("biscuit-roll");
+    biscuitRoll.addEventListener('click', runBiscuitGame);
+
+    let wildcardRoll = document.getElementById("wildcard-roll");
+    wildcardRoll.addEventListener('click', runWildcardGame);
 
 
+    //check where below goes, and do same for wildcard
     document.getElementById("biscuit-input").addEventListener("keydown", function(event) {
         if (event.key === "Enter") {
-            calculateAsciiValue();
-            asciiCeilingError()
+            runBiscuitGame();
         }
     })
 })
 
+function runBiscuitGame() {
+    calculateAsciiValue();
+    asciiCeilingError();
+}
+
+function runWildcardGame() {
+
+}
 
 /**
  * Function to calculate the ASCII value of the user input 
@@ -40,18 +53,14 @@ function calculateAsciiValue() {
  * Function to check for values outside the range of the program and generate an alert asking for a smaller word.
  */
 function asciiCeilingError() {
-
-    if (document.getElementById("biscuit-name-result").textContent === "undefined undefined") {
-        alert("Your word is too valuable! Please enter a shorter word.");
+//try to get an option that covers if just one is undefined?
+    if (document.getElementById("biscuit-name-result").textContent == "undefined undefined") {
+        alert("Your word is too valuable! The gremlins have taken it; please enter a shorter word.");
         document.getElementById("biscuit-name-result").textContent = "Please try another biscuit.";
     }
 }
 
 function wildcardRoll() {
-
-}
-
-function displayName () {
 
 }
 
