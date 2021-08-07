@@ -29,6 +29,8 @@ function calculateAsciiValue() {
     biscuitDivide = biscuitSum / 2;
     let num1 = Math.floor(biscuitDivide / 42);
     let num2 = Math.floor(biscuitDivide / 52);
+    
+    document.getElementById("biscuit-name-result").textContent = `${(wizardFirstNames[num1])} ${(wizardLastNames[num2])}`;
 }
 
 function asciiCeilingError() {
