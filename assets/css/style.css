@@ -59,3 +59,7 @@ a:hover, a:focus {
 .nav-bar li {
     padding: 20px;
 }
+
+.active {
+    text-decoration: underline;
+}
