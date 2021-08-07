@@ -1,4 +1,4 @@
-wizardFirstNames = ["Scout", "The", "Starmaker", "Ziggy", "Moonage", "Velvet", "Data", "Hoggle", "Rudi", "Izzy", "Genesis", "Groulf", "Ged", "Sparrowhawk", "Zorgon", "Neb", "Jesha", "Kin", "Lorsa", "Kay", "Emice", "Donn", "Klegg", "Bean", "Zues", "Alta", "Celestial"];
+wizardFirstNames = ["Scout", "The", "Starmaker", "Ziggy", "Moonage", "Velvet", "Data", "Hoggle", "Rudi", "Izzy", "Genesis", "Groulf", "Ged", "Sparrowhawk", "Zorgon", "Neb", "Jesha", "Kin", "Lorsa", "Kay", "Emice", "Donn", "Klegg", "Bean", "Zues", "Alta", "Celestial", "Jatz"];
 wizardLastNames = ["Rumbles", "Gorgonmitre", "Jupiter", "Stardust", "Glass", "Blackout", "Daydream", "Smith", "The Night Bringer", "The Day Waker", "Genesis", "The Garrulous", "Of The Adler Groves", "Of The Deep Forests", "Of The Underbrush", "Of The Deep Places", "Of The Dark Dank", "The Eldest", "The Elder", "The Young", "The Middle", "The Last", "The Wizened", "The Feeble", "The Feral", "The Knotty", "The Friable", "Of Horndown", "The Wet", "The Moist", "The Moister", "With the Mostest", "The Cantankerous", "The Dulcet", "The Ghastly", "Of The Long Spindle", "Of The Dells", "Of Widow's Peak", "Of Glendale, CA", "With The Short Cane", "The Long of Neck, Humped of Back"];
 
 document.addEventListener("DOMContentLoaded", function() {
@@ -11,12 +11,6 @@ document.addEventListener("DOMContentLoaded", function() {
     wildcardRoll.addEventListener('click', runWildcardGame);
 
 
-    //check where below goes, and do same for wildcard
-    document.getElementById("biscuit-input").addEventListener("keydown", function(event) {
-        if (event.key === "Enter") {
-            runBiscuitGame();
-        }
-    })
 })
 
 function runBiscuitGame() {
@@ -27,6 +21,12 @@ function runBiscuitGame() {
 function runWildcardGame() {
 
 }
+
+document.getElementById("biscuit-input").addEventListener("keydown", function(event) {
+    if (event.key === "Enter") {
+        runBiscuitGame();
+    }
+})
 
 /**
  * Function to calculate the ASCII value of the user input 
@@ -62,6 +62,11 @@ function asciiCeilingError() {
 
 function wildcardRoll() {
 
+}
+
+function displayNameHistory() {
+    let history = [];
+    document.getElementById("name-printout").push
 }
 
 function resetNameHistory() {
