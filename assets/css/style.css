@@ -1,0 +1,33 @@
+@import url('https://fonts.googleapis.com/css2?family=Space+Mono&display=swap');
+
+* {
+    font-family: 'Space Mono', monospace, sans-serif;
+}
+
+a {
+    text-decoration: none;
+    color: black;
+}
+
+a:hover, a:focus {
+    text-decoration: underline;
+}
+
+/*Styling for landing page*/
+
+.landing-header {
+    display: flex;
+    align-items: flex-end;
+    justify-content: center;
+    flex-wrap: wrap;
+    text-align: center;
+}
+
+.landing-links {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    text-align: center;
+    margin: 0 300px;
+}
+/*media query for landing link, get rid of margin??*/
