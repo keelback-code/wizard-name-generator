@@ -63,3 +63,7 @@ a:hover, a:focus {
 .active {
     text-decoration: underline;
 }
+
+.game-container {
+    text-align: center;
+}
