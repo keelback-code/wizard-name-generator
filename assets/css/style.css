@@ -34,7 +34,7 @@ a:hover, a:focus {
     text-align: center;
     margin: 0 300px;
 }
-/*media query for landing link, get rid of margin??*/
+/*for media query for landing link, get rid of margin??*/
 
 
 /*Styling for Biscuit and Wildcard Mode pages*/
@@ -68,9 +68,7 @@ a:hover, a:focus {
     text-align: center;
 }
 
-/*Styling for Biscuit Mode*/
-
-.biscuit-name-display {
+.name-display, .history-display {
     display: flex;
     display: inline;
     flex-direction: row;

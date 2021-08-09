@@ -1,30 +1,31 @@
-wizardFirstNames = ["Scout", "The", "Starmaker", "Ziggy", "Moonage", "Velvet", "Data", "Hoggle", "Rudi", "Izzy", "Genesis", "Groulf", "Ged", "Sparrowhawk", "Zorgon", "Neb", "Jesha", "Kin", "Lorsa", "Kay", "Emice", "Donn", "Klegg", "Bean", "Zues", "Alta", "Celestial", "Jatz", "Tam", "Merlyn", "Taliesin", "Spacedrop"];
+wizardFirstNames = ["Scout", "The", "Starmaker", "Ziggy", "Moonage", "Velvet", "Data", "Hoggle", "Rudi", "Izzy", "Genesis", "Groulf", "Ged", "Sparrowhawk", "Zorgon", "Neb", "Jesha", "Kin", "Lorsa", "Kay", "Emice", "Donn", "Klegg", "Bean", "Zues", "Alta", "Celestial", "Jatz", "Tam", "Merlyn", "Taliesin", "Spacedrop", "Oblivia"];
 wizardLastNames = ["Rumbles", "Gorgonmitre", "Jupiter", "Stardust", "Glass", "Blackout", "Daydream", "Smith", "The Night Bringer", "The Day Waker", "Genesis", "The Garrulous", "Of The Adler Groves", "Of The Deep Forests", "Of The Underbrush", "Of The Deep Places", "Of The Dark Dank", "The Eldest", "The Elder", "The Young", "The Middle", "The Last", "The Wizened", "The Feeble", "The Feral", "The Knotty", "The Friable", "Of Horndown", "The Wet", "The Moist", "The Moister", "With the Mostest", "The Cantankerous", "The Dulcet", "The Ghastly", "Of The Long Spindle", "Of The Dells", "Of Widow's Peak", "Of Glendale, CA", "With The Short Cane", "The Long of Neck, Humped of Back", "The Wyrd", "The Not-Terrible", "The Amazing Fantastic Excellent Very Good", "The Intergalactic", "The Nefarious", "The Relentless", "The Cryptic", "42", "The Luminuous", "The Shimmerer", "The Mathemagician", "The Ordinary"];
 
 document.addEventListener("DOMContentLoaded", function() {
 // all the event listener related things in here, all functions underneath
 
     let biscuitRoll = document.getElementById("biscuit-roll");
-    biscuitRoll.addEventListener('click', runBiscuitGame);
+    biscuitRoll.addEventListener('click', runBiscuitMode);
 
     let wildcardRoll = document.getElementById("wildcard-roll");
-    wildcardRoll.addEventListener('click', runWildcardGame);
-
+    wildcardRoll.addEventListener('click', runWildcardMode);
 
 })
 
-function runBiscuitGame() {
+function runBiscuitMode() {
     calculateAsciiValue();
     asciiCeilingError();
+    displayNameHistory();
+    resetNameHistory();
 }
 
-function runWildcardGame() {
+function runWildcardMode() {
 
 }
 
 document.getElementById("biscuit-input").addEventListener("keydown", function(event) {
     if (event.key === "Enter") {
-        runBiscuitGame();
+        runBiscuitMode();
     }
 })
 
@@ -45,8 +46,8 @@ function calculateAsciiValue() {
     let num1 = Math.floor(biscuitDivide / 42);
     let num2 = Math.floor(biscuitDivide / 21);
     
-    document.getElementById("biscuit-first-name-result").textContent = `${(wizardFirstNames[num1])}`;
-    document.getElementById("biscuit-last-name-result").textContent = `${(wizardLastNames[num2])}`;
+    document.getElementById("first-name-result").textContent = `${(wizardFirstNames[num1])}`;
+    document.getElementById("last-name-result").textContent = `${(wizardLastNames[num2])}`;
 
 }
 
@@ -55,13 +56,14 @@ function calculateAsciiValue() {
  */
 function asciiCeilingError() {
 
-    let firstName = document.getElementById("biscuit-first-name-result").textContent
-    let lastName = document.getElementById("biscuit-last-name-result").textContent
+    let firstName = document.getElementById("first-name-result").textContent
+    let lastName = document.getElementById("last-name-result").textContent
 
     if (firstName == "undefined" || lastName == "undefined") {
         alert("Your word is too valuable! The gremlins have taken it; please enter a shorter word.");
-        document.getElementById("biscuit-first-name-result").textContent = "Please try another biscuit.";
-        document.getElementById("biscuit-last-name-result").textContent = "";
+        document.getElementById("first-name-result").textContent = "Please try another biscuit.";
+        document.getElementById("last-name-result").textContent = "";
+
     }
 }
 
@@ -70,10 +72,22 @@ function wildcardRoll() {
 }
 
 function displayNameHistory() {
-//    let history = [];
+//   let history = [];
 //   document.getElementById("name-printout").push
+    
+    localStorage.setItem("firstNameHistory", document.getElementById("first-name-result").textContent);
+    localStorage.setItem("lastNameHistory", document.getElementById("last-name-result").textContent);
+
+    document.getElementById("first-name-history").textContent = localStorage.getItem("firstNameHistory");
+    document.getElementById("last-name-history").textContent = localStorage.getItem("lastNameHistory");
+
 }
 
 function resetNameHistory() {
+
+    if (localStorage.length > 4) {
+        alert("Your wizardex is full");
+        clear();
+    }
 
 }
