@@ -67,3 +67,12 @@ a:hover, a:focus {
 .game-container {
     text-align: center;
 }
+
+/*Styling for Biscuit Mode*/
+
+.biscuit-name-display {
+    display: flex;
+    display: inline;
+    flex-direction: row;
+    align-content: center;
+}
