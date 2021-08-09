@@ -56,60 +56,89 @@ A disabled user who is new or returning to the site:
 
 As the owner of the site:
 * I want users to be able to use the site easily and intuitively
-I want users to be able to easily generate and find names
-I want to create a gender neutral site
-I want to provide the same experience for all users
+* I want users to be able to easily generate and find names
+* I want to create a gender neutral site
+* I want to provide the same experience for all users
 
-Design and UX
-The visual design for this site is simplistic so as not to draw away from the game: focus on the javascript/game for this site/project.
+### Design and UX
+
+The visual design for this site is simplistic so as not to draw away from the game: focus on the javascript/game for this site/project. I also aimed for a retro feel to the site, reminiscent of the random name generators my friends and I played with in our free time in the computer lab at primary school, in the late 90s.
+
 When researching wizard names I was instantly bombarded by sites advertising wizards names ‘for girls’ and ‘for boys’. I would like to create a gender-neutral site where the gender doesn’t matter; because this is a name for a wizard, which is generally speaking both magical and fictional so there’s no need to gender it. There is enough gendering in this world, which is constantly excluding members of the LGBTQ+ community, without extending that to wizards. Fantasy and fiction can be forms of escapism, and if you use that escapism to help escape a gendered world, I don’t want to be a reminder of that world.
 
-Wireframes
-Colour schemes and typography
-css rule
-font-family: 'Space Mono', monospace;
-I have chosen this font because it gives the site a retro feel, without being over-the-top.
-I am sticking with a white background and black text for this website, so as to focus on the game. It contributes to the retro feel but is also clear and concise for ease-of-use.
-Accessibility
+### Wireframes
+
+go here
+
+### Colour schemes and typography
+
+I have chosen this Space Mono for the font because it gives the site a retro feel, without being over-the-top. I am sticking with a white background and black text for this website, so as to focus on the game. It contributes to the retro feel but is also clear and concise for ease-of-use.
+
+### Accessibility
+
 Semantic HTML and aria labels were implemented across the site (only keep this section if you have more to say, otherwise this is covered in testing section)
 
-Features - all pages, per page
-Features across all pages
+### Features
+all pages, per page
+
+### Features across all pages
 Clear header, making the purpose clear to users of the site.
+
 Footer with links to social media, which will open in a new tab with aria labels announcing this
 
-Landing page
+### Landing page
+
 Links to each mode
 
-Biscuit Mode and Wildcard Mode pages
-Submit button, triggered by mouse or enter key - picture of a D20 dice to keep in line with the wizard theme
+### Biscuit Mode and Wildcard Mode pages
+
+Submit button, triggered by mouse or enter key - picture/icon of a D20 dice to keep in line with the wizard theme
+
 Area for new name to be printed to the page
+
 Area for name history to be displayed - maximum of five names to avoid visual or data overload.
+
 Once five names have been pushed to the history, an alert will pop up to let the user know that the history is going to be emptied (refresh or just 0?). The names will also be listed on the alert so that the user can record them if need be.
+
 Navigation links listing Home, Wildcard Mode and Biscuit Mode, allowing for easy and intuitive navigation of site for all users. On desktop links will be underlined when they are hovered over to indicate to the user that they are clickable. The active page will also be indicated in the navigation bar.
+
 On mobile and most tablets the navigation bar will change to a hamburger design and will remain on the same side of the screen for continuity and ease of use.
 
-Biscuit Mode page
+### Biscuit Mode page
 Text box asking user for input; asks for favourite biscuit, program sums the ASCII values of the characters and uses this number to generate a name.
-If the ASCII value is too great for the equation (for example ‘zzzzzzzzzzzz’) an error alert will be generated asking the user to input a shorter word
+
+If the ASCII value is too great for the equation an error alert will be generated asking the user to input a shorter word
+
 Link to the ASCII Wikipedia page for users who are interested in the process
 
-Technologies
+### Technologies
 Languages used:
+
 HTML5
+
 CSS
+
 Javascript
+
 Frameworks, Libraries and Programs Used:
+
 Google Fonts - for the typography
+
 Balsamiq - for creating the wireframes in the design stage
+
 Firefox Developer Tools - for inspecting and testing the site
+
 GitHub - for hosting the site
+
 GitPages - for the deployment of the site
+
 Gitpod - for editing the files
 
-Testing 
+### Testing 
+
 tbc
-User Stories Testing
+
+### User Stories Testing
 A first time user looking to play the game:
 I want to easily understand the content and layout of the site
 Simple and clear flow to site, simple instructions on how to play the game
