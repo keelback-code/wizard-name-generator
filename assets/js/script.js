@@ -20,7 +20,9 @@ function runBiscuitMode() {
 }
 
 function runWildcardMode() {
-
+    wildcardRoll()
+    displayNameHistory();
+    resetNameHistory();
 }
 
 document.getElementById("biscuit-input").addEventListener("keydown", function(event) {
@@ -67,19 +69,72 @@ function asciiCeilingError() {
     }
 }
 
+/**
+ * Function to calculate two random numbers and use that to generate random wizard name; one from each array.
+ */
 function wildcardRoll() {
+
+    let wildNum1 = Math.floor(Math.random() * wizardFirstNames.length)
+    let wildNum2 = Math.floor(Math.random() * wizardLastNames.length)
+
+    document.getElementById("first-name-result").textContent = `${(wizardFirstNames[wildNum1])}`;
+    document.getElementById("last-name-result").textContent = `${(wizardLastNames[wildNum2])}`;
+    console.log(wizardFirstNames[wildNum1]);
 
 }
 
 function displayNameHistory() {
-//   let history = [];
-//   document.getElementById("name-printout").push
-    
-    localStorage.setItem("firstNameHistory", document.getElementById("first-name-result").textContent);
-    localStorage.setItem("lastNameHistory", document.getElementById("last-name-result").textContent);
 
-    document.getElementById("first-name-history").textContent = localStorage.getItem("firstNameHistory");
-    document.getElementById("last-name-history").textContent = localStorage.getItem("lastNameHistory");
+    let history = [];
+    let firstHistoryName = document.getElementById("first-name-result");
+    let lastHistoryName = document.getElementById("last-name-result");
+
+    for (i in history) {
+        history.push(firstHistoryName[i].textContent);
+        history.push(lastHistoryName[i].textContent);
+        document.getElementById("first-name-history").textContent = history[i];
+        console.log(history);
+    }
+
+    console.log(history);
+    
+
+
+
+
+
+    //let history = [];
+    //history.push(document.getElementById("first-name-result").textContent);
+    //history.push(document.getElementById("last-name-result").textContent);
+    //names.push(history);
+    //document.getElementById("name-history").textContent = history;
+    //console.log(history);
+
+    //document.getElementById("first-name-history").textContent = history;  
+    
+    //let nameHistory = [];
+    
+    //localStorage.setItem("firstNameHistory", document.getElementById("first-name-result").textContent);
+    //localStorage.setItem("lastNameHistory", document.getElementById("last-name-result").textContent);
+
+    //for (i in nameHistory) {
+        //localStorage.setItem("nameHistory", JSON.stringify(nameHistory));
+        //nameHistory.push(document.getElementById("first-name-result").textContent);
+        //nameHistory.push(document.getElementById("last-name-result").textContent);
+        //document.getElementById("first-name-history").textContent = localStorage.getItem("firstNameHistory");
+        //document.getElementById("last-name-history").textContent = localStorage.getItem("lastNameHistory");
+        //console.log(nameHistory);
+        //console.log(localStorage);
+        
+    //}
+    
+    //history.push(document.getElementById("first-name-result").textContent);
+    //localStorage.setItem("nameHistory", JSON.stringify(nameHistory));
+
+    
+
+    //document.getElementById("first-name-history").textContent = localStorage.getItem("firstNameHistory");
+    //document.getElementById("last-name-history").textContent = localStorage.getItem("lastNameHistory");
 
 }
 
