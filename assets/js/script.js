@@ -4,7 +4,13 @@ wizardLastNames = ["Rumbles", "Gorgonmitre", "Jupiter", "Stardust", "Glass", "Bl
 document.addEventListener("DOMContentLoaded", function() {
 
     let biscuitRoll = document.getElementById("biscuit-roll");
-    biscuitRoll.addEventListener('click', runBiscuitMode);   
+    biscuitRoll.addEventListener('click', runBiscuitMode); 
+    
+    //let firstHistoryName = document.getElementById("first-name-result-biscuit").textContent;
+    //let lastHistoryName = document.getElementById("last-name-result-biscuit").textContent;
+    //printHistory.push(firstHistoryName.value);
+    //printHistory.push(lastHistoryName.value);
+    //localStorage.setItem("names", JSON.stringify(printHistory));
 
 })
 
@@ -12,6 +18,8 @@ document.addEventListener("DOMContentLoaded", function() {
     
     let wildcardRoll = document.getElementById("wildcard-roll");
     wildcardRoll.addEventListener('click', runWildcardMode);
+
+    localStorage.setItem("names", JSON.stringify(printHistory));
     
 })
     
@@ -19,13 +27,17 @@ document.addEventListener("DOMContentLoaded", function() {
 function runBiscuitMode() { 
     biscuitRoll();
     asciiCeilingError();
-    displayNameHistory();
+    //histTest();
+    //displayNameHistory();
+    histTestTwo();
     resetNameHistory();
 }
 
 function runWildcardMode() {
     wildcardRoll()
-    displayNameHistory();
+    //displayNameHistory();
+    //histTest();
+    //histTestTwo();
     resetNameHistory();
 }
 
@@ -41,7 +53,7 @@ document.getElementById("biscuit-input").addEventListener("keydown", function(ev
 function biscuitRoll() {
 
     biscuitVar = document.getElementById("biscuit-input").value;
-
+    
     if (biscuitVar == "Jaffa Cakes" || biscuitVar == "jaffa cakes" || biscuitVar == "jaffacakes" || biscuitVar == "Jaffa cakes") {
         alert("Is that really a biscuit? I find no name here in that file. Please roll again.");
     } else {
@@ -63,11 +75,11 @@ function calculateAsciiValue() {
     }
 
     biscuitDivide = biscuitSum / 2;
-    let num1 = Math.floor(biscuitDivide / 42);
-    let num2 = Math.floor(biscuitDivide / 21);
+    let biscNum1 = Math.floor(biscuitDivide / 42);
+    let biscNum2 = Math.floor(biscuitDivide / 21);
     
-    document.getElementById("first-name-result-biscuit").textContent = `${(wizardFirstNames[num1])}`;
-    document.getElementById("last-name-result-biscuit").textContent = `${(wizardLastNames[num2])}`;
+    document.getElementById("first-name-result-biscuit").textContent = `${(wizardFirstNames[biscNum1])}`;
+    document.getElementById("last-name-result-biscuit").textContent = `${(wizardLastNames[biscNum2])}`;
 
 }
 
@@ -76,13 +88,13 @@ function calculateAsciiValue() {
  */
 function asciiCeilingError() {
 
-    let firstName = document.getElementById("first-name-result").textContent
-    let lastName = document.getElementById("last-name-result").textContent
+    let firstName = document.getElementById("first-name-result-biscuit").textContent
+    let lastName = document.getElementById("last-name-result-biscuit").textContent
 
     if (firstName == "undefined" || lastName == "undefined") {
         alert("Your word is too valuable! The gremlins have taken it; please enter a shorter word.");
-        document.getElementById("first-name-result").textContent = "Please try another biscuit.";
-        document.getElementById("last-name-result").textContent = "";
+        document.getElementById("first-name-result-biscuit").textContent = "Please try another biscuit.";
+        document.getElementById("last-name-result-biscuit").textContent = "";
 
     }
 }
@@ -100,20 +112,68 @@ function wildcardRoll() {
 
 }
 
+function histTest() {
+    let printHistory = [];
+    
+    
+    for (i of printHistory) {
+        let firstHistoryName = document.getElementById("first-name-result-wildcard").textContent;
+        let lastHistoryName = document.getElementById("last-name-result-wildcard").textContent;
+        printHistory.push(firstHistoryName);
+        printHistory.push(lastHistoryName);
+        console.log(printHistory);
+    }
+    
+    
+
+}
+
+function histTestTwo() {
+    if (typeof(Storage) !== "undefined") {
+
+        let printHistory = [];
+
+        localStorage.setItem("names", JSON.stringify(printHistory));
+        let data = JSON.parse(localStorage.getItem("names"))
+
+        if (localStorage.getItem("names")) {
+            names = JSON.parse(localStorage.getItem("names"))
+        } else {
+            names = []
+        }
+
+        data.forEach((names) => {
+            document.getElementById("first-name-history-biscuit").textContent = localStorage.getItem("names");
+        })
+
+        //} else {
+        //alert("alert here, including name")
+    }
+}
+
+
+
+
 function displayNameHistory() {
 
-    let history = [];
-    let firstHistoryName = document.getElementById("first-name-result");
-    let lastHistoryName = document.getElementById("last-name-result");
+    //if (typeof(Storage) !== "undefined") {
+        // Code for localStorage
+        //} else {
+        //alert("alert here, including name")
+    //}
 
-    for (i in history) {
-        history.push(firstHistoryName[i].textContent);
-        history.push(lastHistoryName[i].textContent);
-        document.getElementById("first-name-history").textContent = history[i];
-        console.log(history);
-    }
+    //let history = [];
+    //let firstHistoryName = document.getElementById("first-name-result-biscuit");
+    //let lastHistoryName = document.getElementById("last-name-result-biscuit");
 
-    console.log(history);
+    //for (i in history) {
+     //   history.push(firstHistoryName[i].textContent);
+     //   history.push(lastHistoryName[i].textContent);
+     //   document.getElementById("first-name-history-biscuit").innerHTML = history[i];
+     //   console.log(history);
+    //}
+
+    //console.log(history);
     
 
 
@@ -131,27 +191,41 @@ function displayNameHistory() {
     
     //let nameHistory = [];
     
-    //localStorage.setItem("firstNameHistory", document.getElementById("first-name-result").textContent);
-    //localStorage.setItem("lastNameHistory", document.getElementById("last-name-result").textContent);
+    let firstHistoryName = document.getElementById("first-name-result-biscuit").textContent;
+    let lastHistoryName = document.getElementById("last-name-result-biscuit").textContent;
 
-    //for (i in nameHistory) {
-        //localStorage.setItem("nameHistory", JSON.stringify(nameHistory));
-        //nameHistory.push(document.getElementById("first-name-result").textContent);
-        //nameHistory.push(document.getElementById("last-name-result").textContent);
-        //document.getElementById("first-name-history").textContent = localStorage.getItem("firstNameHistory");
-        //document.getElementById("last-name-history").textContent = localStorage.getItem("lastNameHistory");
-        //console.log(nameHistory);
-        //console.log(localStorage);
-        
+    localStorage.setItem("firstNameHistory", document.getElementById("first-name-result-biscuit").textContent);
+    localStorage.setItem("lastNameHistory", document.getElementById("last-name-result-biscuit").textContent);
+
+    //for (let i = 0; i < localStorage.length; i++) {
+    //    let key = localStorage.key(i);
+    //    console.log(localStorage)
     //}
+    for (i in localStorage) {
+        localStorage.push(firstHistoryName);
+        localStorage.push(lastHistoryName);
+     //   localStorage.setItem("nameHistory", JSON.stringify(nameHistory));
+     //   document.getElementById("first-name-result-biscuit").textContent.push(localStorage);
+     //   document.getElementById("last-name-result-biscuit").textContent.push(nameHistory);
+     //   document.getElementById("first-name-history").textContent = localStorage.getItem("firstNameHistory");
+     //   document.getElementById("last-name-history").textContent = localStorage.getItem("lastNameHistory");
+     //   console.log(nameHistory);
+     //   console.log(localStorage);  
+    }
+
+    //console.log(nameHistory);
+    console.log(localStorage);
     
     //history.push(document.getElementById("first-name-result").textContent);
     //localStorage.setItem("nameHistory", JSON.stringify(nameHistory));
 
-    
-
     //document.getElementById("first-name-history").textContent = localStorage.getItem("firstNameHistory");
     //document.getElementById("last-name-history").textContent = localStorage.getItem("lastNameHistory");
+
+    //printHistory = [];
+    //firstNameHistory.push(printHistory);
+    //lastNameHistory.push(printHistory);
+    //console.log(printHistory);
 
 }
 
