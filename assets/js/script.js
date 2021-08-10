@@ -2,17 +2,23 @@ wizardFirstNames = ["Scout", "The", "Starmaker", "Ziggy", "Moonage", "Velvet", "
 wizardLastNames = ["Rumbles", "Gorgonmitre", "Jupiter", "Stardust", "Glass", "Blackout", "Daydream", "Smith", "The Night Bringer", "The Day Waker", "Genesis", "The Garrulous", "Of The Adler Groves", "Of The Deep Forests", "Of The Underbrush", "Of The Deep Places", "Of The Dark Dank", "The Eldest", "The Elder", "The Young", "The Middle", "The Last", "The Wizened", "The Feeble", "The Feral", "The Knotty", "The Friable", "Of Horndown", "The Wet", "The Moist", "The Moister", "With the Mostest", "The Cantankerous", "The Dulcet", "The Ghastly", "Of The Long Spindle", "Of The Dells", "Of Widow's Peak", "Of Glendale, CA", "With The Short Cane", "The Long of Neck, Humped of Back", "The Wyrd", "The Not-Terrible", "The Amazing Fantastic Excellent Very Good", "The Intergalactic", "The Nefarious", "The Relentless", "The Cryptic", "42", "The Luminuous", "The Shimmerer", "The Mathemagician", "The Ordinary"];
 
 document.addEventListener("DOMContentLoaded", function() {
-// all the event listener related things in here, all functions underneath
 
     let biscuitRoll = document.getElementById("biscuit-roll");
-    biscuitRoll.addEventListener('click', runBiscuitMode);
-
-    let wildcardRoll = document.getElementById("wildcard-roll");
-    wildcardRoll.addEventListener('click', runWildcardMode);
+    biscuitRoll.addEventListener('click', runBiscuitMode);   
 
 })
 
+document.addEventListener("DOMContentLoaded", function() {
+    
+    let wildcardRoll = document.getElementById("wildcard-roll");
+    wildcardRoll.addEventListener('click', runWildcardMode);
+    
+})
+    
+
 function runBiscuitMode() {
+    biscuitVar = document.getElementById("biscuit-input").value;
+    biscuitRoll();
     calculateAsciiValue();
     asciiCeilingError();
     displayNameHistory();
@@ -32,11 +38,21 @@ document.getElementById("biscuit-input").addEventListener("keydown", function(ev
 })
 
 /**
+ * Function to begin biscuit mode; checks if user has entered input for Jaffa cakes, if not then runs calculateAsciiValue function.
+ */
+function biscuitRoll() {
+
+    // if jaffa run alert, else run ascii value
+
+    
+}
+
+/**
  * Function to calculate the ASCII value of the user input 
  */
 function calculateAsciiValue() {
 
-    biscuitVar = document.getElementById("biscuit-input").value;
+    //biscuitVar = document.getElementById("biscuit-input").value;
     let biscuitSum = 0;
 
     for (i in biscuitVar) {
@@ -48,8 +64,8 @@ function calculateAsciiValue() {
     let num1 = Math.floor(biscuitDivide / 42);
     let num2 = Math.floor(biscuitDivide / 21);
     
-    document.getElementById("first-name-result").textContent = `${(wizardFirstNames[num1])}`;
-    document.getElementById("last-name-result").textContent = `${(wizardLastNames[num2])}`;
+    document.getElementById("first-name-result-biscuit").textContent = `${(wizardFirstNames[num1])}`;
+    document.getElementById("last-name-result-biscuit").textContent = `${(wizardLastNames[num2])}`;
 
 }
 
@@ -74,12 +90,11 @@ function asciiCeilingError() {
  */
 function wildcardRoll() {
 
-    let wildNum1 = Math.floor(Math.random() * wizardFirstNames.length)
-    let wildNum2 = Math.floor(Math.random() * wizardLastNames.length)
+    let wildNum1 = Math.floor(Math.random() * wizardFirstNames.length);
+    let wildNum2 = Math.floor(Math.random() * wizardLastNames.length);
 
-    document.getElementById("first-name-result").textContent = `${(wizardFirstNames[wildNum1])}`;
-    document.getElementById("last-name-result").textContent = `${(wizardLastNames[wildNum2])}`;
-    console.log(wizardFirstNames[wildNum1]);
+    document.getElementById("first-name-result-wildcard").textContent = `${(wizardFirstNames[wildNum1])}`;
+    document.getElementById("last-name-result-wildcard").textContent = `${(wizardLastNames[wildNum2])}`;
 
 }
 
