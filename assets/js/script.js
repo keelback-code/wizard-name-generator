@@ -16,10 +16,8 @@ document.addEventListener("DOMContentLoaded", function() {
 })
     
 
-function runBiscuitMode() {
-    biscuitVar = document.getElementById("biscuit-input").value;
+function runBiscuitMode() { 
     biscuitRoll();
-    calculateAsciiValue();
     asciiCeilingError();
     displayNameHistory();
     resetNameHistory();
@@ -42,9 +40,14 @@ document.getElementById("biscuit-input").addEventListener("keydown", function(ev
  */
 function biscuitRoll() {
 
-    // if jaffa run alert, else run ascii value
+    biscuitVar = document.getElementById("biscuit-input").value;
 
-    
+    if (biscuitVar == "Jaffa Cakes" || biscuitVar == "jaffa cakes" || biscuitVar == "jaffacakes" || biscuitVar == "Jaffa cakes") {
+        alert("Is that really a biscuit? I find no name here in that file. Please roll again.");
+    } else {
+        calculateAsciiValue();
+    }
+  
 }
 
 /**
@@ -52,7 +55,6 @@ function biscuitRoll() {
  */
 function calculateAsciiValue() {
 
-    //biscuitVar = document.getElementById("biscuit-input").value;
     let biscuitSum = 0;
 
     for (i in biscuitVar) {
