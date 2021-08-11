@@ -29,7 +29,7 @@ function runBiscuitMode() {
     asciiCeilingError();
     //histTest();
     //displayNameHistory();
-    histTestTwo();
+    //histTestTwo();
     resetNameHistory();
 }
 
@@ -38,6 +38,7 @@ function runWildcardMode() {
     //displayNameHistory();
     //histTest();
     //histTestTwo();
+    histTestThree();
     resetNameHistory();
 }
 
@@ -127,6 +128,22 @@ function histTest() {
     
 
 }
+
+function histTestThree() {
+    
+    //let printHistory = [];
+
+    localStorage.setItem("names", JSON.stringify(printHistory));
+    let data = JSON.parse(localStorage.getItem("names"));
+
+    if (localStorage.length >= 1) {
+        printHistory = JSON.parse(localStorage.getItem("names"));
+    } else if (localStorage.length < 0) {
+        printHistory = [];
+    }
+
+}
+
 
 function histTestTwo() {
     if (typeof(Storage) !== "undefined") {
