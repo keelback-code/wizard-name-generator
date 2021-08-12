@@ -6,22 +6,23 @@ document.addEventListener("DOMContentLoaded", function() {
     let biscuitRoll = document.getElementById("biscuit-roll");
     biscuitRoll.addEventListener('click', runBiscuitMode); 
     
-    //let firstHistoryName = document.getElementById("first-name-result-biscuit").textContent;
-    //let lastHistoryName = document.getElementById("last-name-result-biscuit").textContent;
-    //printHistory.push(firstHistoryName.value);
-    //printHistory.push(lastHistoryName.value);
-    //localStorage.setItem("names", JSON.stringify(printHistory));
-
 })
 
 document.addEventListener("DOMContentLoaded", function() {
     
     let wildcardRoll = document.getElementById("wildcard-roll");
     wildcardRoll.addEventListener('click', runWildcardMode);
-
-    localStorage.setItem("names", JSON.stringify(printHistory));
     
 })
+
+//document.addEventListener("window.onload", function() {
+    
+    //let histTest = document.getElementsByClassName("first-name-display");
+    //document.addEventListener('load', histTestThree);
+
+    //document.getElementById("first-name-result-wildcard").addEventListener("load", histTestThree);
+    
+//})
     
 
 function runBiscuitMode() { 
@@ -30,6 +31,7 @@ function runBiscuitMode() {
     //histTest();
     //displayNameHistory();
     //histTestTwo();
+    histTestThree();
     resetNameHistory();
 }
 
@@ -131,17 +133,27 @@ function histTest() {
 
 function histTestThree() {
     
-    //let printHistory = [];
+    document.getElementById("first-name-result-wildcard").addEventListener("load", histTestThree);
+    
+    const printHistory = [];
+    let firstHistoryName = document.getElementById("first-name-result-wildcard").textContent;
+    let lastHistoryName = document.getElementById("last-name-result-wildcard").textContent;
+    printHistory.push(firstHistoryName, lastHistoryName);
 
-    localStorage.setItem("names", JSON.stringify(printHistory));
-    let data = JSON.parse(localStorage.getItem("names"));
+    //let names = firstHistoryName + lastHistoryName;
 
-    if (localStorage.length >= 1) {
-        printHistory = JSON.parse(localStorage.getItem("names"));
-    } else if (localStorage.length < 0) {
-        printHistory = [];
-    }
+    //localStorage.setItem("names", JSON.stringify(names));
+    //let data = JSON.parse(localStorage.getItem("names"));
 
+    if (printHistory.length >= 1) {
+        window.onload = printHistory.push(firstHistoryName, lastHistoryName);
+    } //else {
+    //    printHistory = [];
+    //}
+
+    console.log(printHistory);
+    //console.log(printHistory);
+    
 }
 
 
