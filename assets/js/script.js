@@ -1,17 +1,14 @@
-wizardFirstNames = ["Scout", "Starmaker", "Ziggy", "Moonage", "Velvet", "Data", "Hoggle", "Rudi", "Izzy", "Genesis", "Groulf", "Ged", "Sparrowhawk", "Zorgon", "Neb", "Jesha", "Kin", "Lorsa", "Kay", "Emice", "Donn", "Klegg", "Bean", "Zues", "Alta", "Celestial", "Jatz", "Tam", "Merlyn", "Taliesin", "Spacedrop", "Oblivia"];
-wizardLastNames = ["Rumbles", "Gorgonmitre", "Jupiter", "Stardust", "Glass", "Blackout", "Daydream", "Smith", "The Night Bringer", "The Day Waker", "Genesis", "The Garrulous", "Of The Adler Groves", "Of The Deep Forests", "Of The Underbrush", "Of The Deep Places", "Of The Dark Dank", "The Eldest", "The Elder", "The Young", "The Middle", "The Last", "The Wizened", "The Feeble", "The Feral", "The Knotty", "The Friable", "Of Horndown", "The Wet", "The Moist", "The Moister", "With the Mostest", "The Cantankerous", "The Dulcet", "The Ghastly", "Of The Long Spindle", "Of The Dells", "Of Widow's Peak", "Of Glendale, CA", "With The Short Cane", "The Long of Neck, Humped of Back", "The Wyrd", "The Not-Terrible", "The Amazing Fantastic Excellent Very Good", "The Intergalactic", "The Nefarious", "The Relentless", "The Cryptic", "42", "The Luminuous", "The Shimmerer", "The Mathemagician", "The Ordinary"];
+wizardFirstNames = ["Scout", "Starmaker", "Ziggy", "Moonage", "Velvet", "Data", "Hoggle", "Rudi", "Izzy", "Genesis", "Groulf", "Ged", "Sparrowhawk", "Zorgon", "Neb", "Jesha", "Kin", "Lorsa", "Kay", "Emice", "Donn", "Klegg", "Bean", "Zues", "Alta", "Celestial", "Jatz", "Tam", "Merlyn", "Taliesin", "Spacedrop", "Oblivia", "Laser", "Action", "Sparky", "Ulgrub", "Ulm", "Germ", "Hobb", "Sneer", "Aborghast", "Mew", "Storm", "Geld", "Blue", "Winnifrederico", "Soup", "Jillius", "Lox", "Pollux", "Abie-See Diefgie", "Tomby", "Aeiou", "Xippy", "Zoot", "Poot", "Pteey", "Kompooter", "Book", "Vul", "Hoggard", "Furio", "Zemrak", "Nickel", "Apprentice", "Rona", "Neko", "Rouge", "Billiard", "Aster", "Student", "Rookie", "Novice", "Fledgling", "Stranger", "Outsider", "M.", "G.", "K.", "F.", "E."];
+wizardLastNames = ["Rumbles", "Gorgonmitre", "Jupiter", "Stardust", "Glass", "Blackout", "Daydream", "Smith", "The Night Bringer", "The Day Waker", "Genesis", "The Garrulous", "Of The Adler Groves", "Of The Deep Forests", "Of The Underbrush", "Of The Deep Places", "Of The Dark Dank", "The Eldest", "The Elder", "The Young", "The Middle", "The Last", "The Wizened", "The Feeble", "The Feral", "The Knotty", "The Friable", "Of Horndown", "The Wet", "The Moist", "The Moister", "With the Mostest", "The Cantankerous", "The Dulcet", "The Ghastly", "Of The Long Spindle", "Of The Dells", "Of Widow's Peak", "Of Glendale, CA", "With The Short Cane", "The Long of Neck, Humped of Back", "The Wyrd", "The Not-Terrible", "The Amazing Fantastic Excellent Very Good", "The Intergalactic", "The Nefarious", "The Relentless", "The Cryptic", "42", "The Luminuous", "The Shimmerer", "The Mathemagician", "The Ordinary", "Devourer Of Nibbles", "The Betrayer", "The Unassuming", "Of Many Hats", "Percival", "Hoarder of Shiny Things", "The Most Stinky", "Of The Pub Around The Corner", "The Extravagant", "The Perpetually Miffed", "The Vile", "The Sneaky", "Who Flees Before Small Canines", "Liberator of Cockroaches", "The Snarky", "The Smug", "Who You've Probably Never Heard Of But I'm Really Super Famous In Flurgleburg, I Swear", "Splonk", "Stubb", "Weaver of Despair and Baskets", "Of Chains", "The Dumpy", "The Thicc", "Of The Sun", "The Tight Lipped", "Master of Destruction", "Tamer Of Things That Need Taming", "The Balls", "Starlight", "Eater of Peanuts", "The Sparkly", "The Engulfed", "The Sexy", "The Boring", "The User Of Puppets", "Of Lasers", "Fire-eater", "Master of Various Liquids", "Earthen Fist", "The Light", "Blight-Befaller", "Pestilence", "Shockmaster", "The Drowned", "The Triggered", "Of Fanciness", "The Fancy", "The Forgetful", "Death Denier", "The Nosy", "Mousemaster", "Of The Fairies", "Of The Merpeople", "Cyclops Slayer", "User of Tiny Things", "The Perpetually Sleepy"];
 let printHistory = [];
 
 document.addEventListener("DOMContentLoaded", function() {
 
     let dice = document.getElementsByTagName("button");
-    console.log(dice);
 
     for (let die of dice) {
         die.addEventListener('click', startRoll);
     }
-
-    
 
 })
 
@@ -21,28 +18,10 @@ document.getElementById("biscuit-input").addEventListener("keydown", function(ev
     }
 })
    
-
-//function runBiscuitMode() { 
-   // startRoll();
-   // biscuitRoll();
-   // asciiCeilingError();
-    //displayNameHistory();
-    //resetNameHistory();
-//}
-
-//function runWildcardMode() {
-   // startRoll();
-  //  wildcardRoll()
-  //  displayNameHistory();
-  //  resetNameHistory();
-//}
-
-
-
+/**
+ * Function to determine which button has been pressed and start the 'roll' for that mode.
+ */
 function startRoll() {
-
-    //let roll = document.getAttribute("roll-type");
-    //console.log(roll)
 
     if (this.getAttribute("roll-type") === "biscuit") {
         biscuitRoll();
@@ -57,8 +36,6 @@ function startRoll() {
         alert(`Unknown roll`);
         throw `Unknown roll.`;
     }
-
-    
 
 }
 
@@ -115,7 +92,7 @@ function asciiCeilingError() {
 }
 
 /**
- * Function to calculate two random numbers and use that to generate random wizard name; one from each array.
+ * Function to calculate two random numbers and use that to generate a random wizard name; one from each array.
  */
 function wildcardRoll() {
 
