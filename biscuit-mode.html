@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -9,6 +10,7 @@
     <link rel="stylesheet" href="assets/css/style.css">
     <title>Wizard Name Generator</title>
 </head>
+
 <body>
     <div class="site-header">
         <div class="mode-header-text">
@@ -16,7 +18,7 @@
                 <h1>Wizard Name Generator</h1>
             </a>
         </div>
-    
+
         <nav class="nav-bar">
             <ul>
                 <li>
@@ -32,15 +34,14 @@
     <div class="game-container">
         <div class="biscuit-input">
             <h2>1. To calculate the right name for you: what's your favourite biscuit?</h2>
-            <input type="text" name="biscuit-input" id="biscuit-input"
-                        placeholder="eg Jammie Dodger" required>
-            <p>Your wizard name will be calculated based on the <a href="https://en.wikipedia.org/wiki/ASCII" target="_blank" rel="noopener"
-                aria-label="Opens in a new tab">ASCII code</a> </p>
+            <input type="text" name="biscuit-input" id="biscuit-input" placeholder="eg Jammie Dodger" required>
+            <p>Your wizard name will be calculated based on the <a href="https://en.wikipedia.org/wiki/ASCII"
+                    target="_blank" rel="noopener" aria-label="Opens in a new tab">ASCII code</a> </p>
         </div>
-    
-        <div class="roll"> 
-            <h3>2. Roll the Dice!</h3>          
-            <button id="biscuit-roll">
+
+        <div class="roll">
+            <h3>2. Roll the Dice!</h3>
+            <button id="biscuit-roll" roll-type="biscuit">
                 <i class="fas fa-dice-d20"></i>
             </button>
         </div>
@@ -53,12 +54,11 @@
 
         <div class="name-history">
             <h5>Name history:</h5>
-            <p id="first-name-history" class="history-display"></p>
-            <p id="last-name-history" class="history-display"></p>
+            <p id="biscuit-name-history-storage" class="name-history-storage"></p>
         </div>
     </div>
-    
-    
+
+
     <div class="sticky-footer-outside">
         <div class="sticky-footer-inside">
             <p>Social media jazz here</p>
@@ -67,6 +67,15 @@
     </div>
 
     <script src="assets/js/script.js"></script>
+    <!--<script>
+        document.addEventListener("DOMContentLoaded", function () {
+
+            let biscuitRoll = document.getElementById("biscuit-roll");
+            biscuitRoll.addEventListener('click', runBiscuitMode);
+
+        })
+    </script>-->
     <script src="https://kit.fontawesome.com/a332586675.js" crossorigin="anonymous"></script>
 </body>
+
 </html>

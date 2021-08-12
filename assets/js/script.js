@@ -4,37 +4,63 @@ let printHistory = [];
 
 document.addEventListener("DOMContentLoaded", function() {
 
-    let biscuitRoll = document.getElementById("biscuit-roll");
-    biscuitRoll.addEventListener('click', runBiscuitMode); 
+    let dice = document.getElementsByTagName("button");
+    console.log(dice);
+
+    for (let die of dice) {
+        die.addEventListener('click', startRoll);
+    }
+
     
+
 })
-
-document.addEventListener("DOMContentLoaded", function() {
-    
-    let wildcardRoll = document.getElementById("wildcard-roll");
-    wildcardRoll.addEventListener('click', runWildcardMode);
-    
-})
-    
-
-function runBiscuitMode() { 
-    biscuitRoll();
-    asciiCeilingError();
-    displayNameHistory();
-    resetNameHistory();
-}
-
-function runWildcardMode() {
-    wildcardRoll()
-    displayNameHistory();
-    resetNameHistory();
-}
 
 document.getElementById("biscuit-input").addEventListener("keydown", function(event) {
     if (event.key === "Enter") {
-        runBiscuitMode();
+        startRoll();
     }
 })
+   
+
+//function runBiscuitMode() { 
+   // startRoll();
+   // biscuitRoll();
+   // asciiCeilingError();
+    //displayNameHistory();
+    //resetNameHistory();
+//}
+
+//function runWildcardMode() {
+   // startRoll();
+  //  wildcardRoll()
+  //  displayNameHistory();
+  //  resetNameHistory();
+//}
+
+
+
+function startRoll() {
+
+    //let roll = document.getAttribute("roll-type");
+    //console.log(roll)
+
+    if (this.getAttribute("roll-type") === "biscuit") {
+        biscuitRoll();
+        asciiCeilingError();
+        //displayNameHistory();
+        //resetNameHistory();
+    } else if (this.getAttribute("roll-type") === "wildcard") {
+        wildcardRoll()
+        displayNameHistory();
+        resetNameHistory();
+    } else {
+        alert(`Unknown roll`);
+        throw `Unknown roll.`;
+    }
+
+    
+
+}
 
 /**
  * Function to begin biscuit mode; checks if user has entered input for Jaffa cakes, if not then runs calculateAsciiValue function.
@@ -101,28 +127,31 @@ function wildcardRoll() {
 
 }
 
+/**
+ * Function to display name history and store it in an array.
+ */
 function displayNameHistory() {
-    
-    document.getElementById("first-name-history-wildcard").textContent = document.getElementById("first-name-result-wildcard").textContent;
-    document.getElementById("last-name-history-wildcard").textContent = document.getElementById("last-name-result-wildcard").textContent;
-    let firstHistoryName = document.getElementById("first-name-history-wildcard").textContent;
-    let lastHistoryName = document.getElementById("last-name-history-wildcard").textContent;
+    //ADD IN BISCUIT
+
+    let firstHistoryName = document.getElementById("first-name-result-wildcard").textContent;
+    let lastHistoryName = document.getElementById("last-name-result-wildcard").textContent;
     let names = firstHistoryName + " " + lastHistoryName;
     printHistory.push(names);
 
     for (i in printHistory) {
-        document.getElementById("second-name-history-storage").textContent = printHistory;
+        document.getElementById("wildcard-name-history-storage").textContent = printHistory;
     }
-
-    console.log(printHistory);
     
 }
 
+/**
+ * Function to alert user once name history has reached cap of five names, and to reset history.
+ */
 function resetNameHistory() {
 
     if (printHistory.length >= 5) {
-        alert("Your wizardex is full");
-        delete printHistory;
+        alert(`Your wizardex is full and will be erased on next roll. If you would like to make note of the names you have generated so far, they are: ${printHistory}`);
+        printHistory = [];
     }
 
 }

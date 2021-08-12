@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -9,6 +10,7 @@
     <link rel="stylesheet" href="assets/css/style.css">
     <title>Wizard Name Generator</title>
 </head>
+
 <body>
     <div class="site-header">
         <div class="mode-header-text">
@@ -16,7 +18,7 @@
                 <h1>Wizard Name Generator</h1>
             </a>
         </div>
-    
+
         <nav class="nav-bar">
             <ul>
                 <li>
@@ -28,11 +30,11 @@
             </ul>
         </nav>
     </div>
-    
+
     <div class="game-container">
         <div class="roll">
             <h2>Roll the Dice!</h2>
-            <button id="wildcard-roll">
+            <button id="wildcard-roll" roll-type="wildcard">
                 <i class="fas fa-dice-d20"></i>
             </button>
         </div>
@@ -45,9 +47,7 @@
 
         <div class="name-history">
             <h4>Name history:</h4>
-            <p id="first-name-history-wildcard" class="history-display"></p>
-            <p id="last-name-history-wildcard" class="history-display"></p>
-            <p id="second-name-history-storage"></p>
+            <p id="wildcard-name-history-storage" class="name-history-storage"></p>
         </div>
     </div>
 
@@ -58,6 +58,15 @@
     </footer>
 
     <script src="assets/js/script.js"></script>
+    <!--<script>
+        document.addEventListener("DOMContentLoaded", function () {
+
+            let wildcardRoll = document.getElementById("wildcard-roll");
+            wildcardRoll.addEventListener('click', runWildcardMode);
+
+        })
+    </script>-->
     <script src="https://kit.fontawesome.com/a332586675.js" crossorigin="anonymous"></script>
 </body>
+
 </html>
