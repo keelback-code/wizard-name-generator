@@ -111,7 +111,7 @@ function displayNameHistory() {
     printHistory.push(names);
 
     for (i in printHistory) {
-        document.getElementById("second-name-history-storage").textContent = `${printHistory}`;
+        document.getElementById("second-name-history-storage").textContent = printHistory;
     }
 
     console.log(printHistory);
