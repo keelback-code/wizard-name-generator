@@ -13,6 +13,25 @@ a:hover, a:focus {
     text-decoration: underline;
 }
 
+/*Code for sticky footer from CSS Tricks: https://css-tricks.com/couple-takes-sticky-footer/*/
+html {
+    height: 100%;
+}
+
+.sticky-footer-outside {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+.sticky-footer-inside {
+    flex: 1 0 auto;
+}
+
+.footer {
+    flex-shrink: 0;
+}
+
 /*Styling for landing page*/
 
 .landing-header {
