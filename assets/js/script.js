@@ -10,13 +10,19 @@ document.addEventListener("DOMContentLoaded", function() {
         die.addEventListener('click', startRoll);
     }
 
+    document.getElementById("biscuit-input").addEventListener("keydown", function(event) {
+        if (event.key === "Enter") {
+            biscuitRoll();
+            asciiCeilingError();
+            displayNameHistory();
+            resetNameHistory();
+        }
+    })
+    
+
 })
 
-document.getElementById("biscuit-input").addEventListener("keydown", function(event) {
-    if (event.key === "Enter") {
-        startRoll();
-    }
-})
+
    
 /**
  * Function to determine which button has been pressed and start the 'roll' for that mode.
@@ -104,17 +110,15 @@ function wildcardRoll() {
 }
 
 /**
- * Function to display name history and store it in an array.
+ * Function to display name history and store it in an array. Will not add error message from asciiCeilingError function to display.
  */
 function displayNameHistory() {
 
     let firstHistoryName = document.getElementsByClassName("name-display")[0].textContent;
     let lastHistoryName = document.getElementsByClassName("name-display")[1].textContent;
     let names = firstHistoryName + " " + lastHistoryName;
-    //printHistory.push(names);
-
     
-    if (document.getElementById("first-name-result-biscuit").textContent === "Please try another biscuit.") {
+    if (document.getElementsByClassName("name-display")[0].textContent === "Please try another biscuit.") {
          printHistory.push();
     } else {
         printHistory.push(names)
@@ -122,10 +126,7 @@ function displayNameHistory() {
 
     for (i in printHistory) {
         document.getElementsByClassName("name-history-storage")[0].textContent = printHistory;
-        //document.getElementById("biscuit-name-history-storage").textContent = printHistory;
     }
-
-    console.log(document.getElementsByClassName("name-history-storage")[1].textContent)
    
 }
 
@@ -135,7 +136,7 @@ function displayNameHistory() {
 function resetNameHistory() {
 
     if (printHistory.length >= 5) {
-        alert(`Your wizardex is full and will be erased on next roll. If you would like to make note of the names you have generated so far, they are: ${printHistory}`);
+        alert(`Your wizardex is full and will be erased on next roll. If you would like to grab a quill and make note of the names you have generated so far, they are: ${printHistory}`);
         printHistory = [];
     }
 
