@@ -13,22 +13,34 @@ a:hover, a:focus {
     text-decoration: underline;
 }
 
+/*Styling for footer*/
+
+footer ul {
+    list-style-type: none;
+    display: flex;
+    flex-direction: row;
+}
+
+footer li {
+    padding: 10px;
+}
+
 /*Code for sticky footer from CSS Tricks: https://css-tricks.com/couple-takes-sticky-footer/*/
-html {
+
+html, body {
     height: 100%;
 }
 
-.sticky-footer-outside {
-    height: 100%;
+body {
     display: flex;
     flex-direction: column;
 }
 
-.sticky-footer-inside {
+.landing-links, .landing-header, .site-header, .game-container {
     flex: 1 0 auto;
 }
 
-.footer {
+footer {
     flex-shrink: 0;
 }
 
