@@ -26,14 +26,14 @@ function startRoll() {
     if (this.getAttribute("roll-type") === "biscuit") {
         biscuitRoll();
         asciiCeilingError();
-        //displayNameHistory();
-        //resetNameHistory();
+        displayNameHistory();
+        resetNameHistory();
     } else if (this.getAttribute("roll-type") === "wildcard") {
         wildcardRoll()
         displayNameHistory();
         resetNameHistory();
     } else {
-        alert(`Unknown roll`);
+        alert(`Unknown roll.`);
         throw `Unknown roll.`;
     }
 
@@ -87,7 +87,6 @@ function asciiCeilingError() {
         alert("Your word is too valuable! The gremlins have taken it; please enter a shorter word.");
         document.getElementById("first-name-result-biscuit").textContent = "Please try another biscuit.";
         document.getElementById("last-name-result-biscuit").textContent = "";
-
     }
 }
 
@@ -99,8 +98,8 @@ function wildcardRoll() {
     let wildNum1 = Math.floor(Math.random() * wizardFirstNames.length);
     let wildNum2 = Math.floor(Math.random() * wizardLastNames.length);
 
-    document.getElementById("first-name-result-wildcard").textContent = `${(wizardFirstNames[wildNum1])}`;
-    document.getElementById("last-name-result-wildcard").textContent = `${(wizardLastNames[wildNum2])}`;
+    document.getElementsByClassName("name-display")[0].textContent = `${(wizardFirstNames[wildNum1])}`;
+    document.getElementsByClassName("name-display")[1].textContent = `${(wizardLastNames[wildNum2])}`;
 
 }
 
@@ -108,15 +107,14 @@ function wildcardRoll() {
  * Function to display name history and store it in an array.
  */
 function displayNameHistory() {
-    //ADD IN BISCUIT
 
-    let firstHistoryName = document.getElementById("first-name-result-wildcard").textContent;
-    let lastHistoryName = document.getElementById("last-name-result-wildcard").textContent;
+    let firstHistoryName = document.getElementsByClassName("name-display")[0].textContent;
+    let lastHistoryName = document.getElementsByClassName("name-display")[1].textContent;
     let names = firstHistoryName + " " + lastHistoryName;
     printHistory.push(names);
 
     for (i in printHistory) {
-        document.getElementById("wildcard-name-history-storage").textContent = printHistory;
+        document.getElementsByClassName("name-history-storage")[0].textContent = printHistory;
     }
     
 }
