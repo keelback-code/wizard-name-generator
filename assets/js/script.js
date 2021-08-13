@@ -98,8 +98,8 @@ function wildcardRoll() {
     let wildNum1 = Math.floor(Math.random() * wizardFirstNames.length);
     let wildNum2 = Math.floor(Math.random() * wizardLastNames.length);
 
-    document.getElementsByClassName("name-display")[0].textContent = `${(wizardFirstNames[wildNum1])}`;
-    document.getElementsByClassName("name-display")[1].textContent = `${(wizardLastNames[wildNum2])}`;
+    document.getElementById("first-name-result-wildcard").textContent = `${(wizardFirstNames[wildNum1])}`;
+    document.getElementById("last-name-result-wildcard").textContent = `${(wizardLastNames[wildNum2])}`;
 
 }
 
@@ -111,12 +111,22 @@ function displayNameHistory() {
     let firstHistoryName = document.getElementsByClassName("name-display")[0].textContent;
     let lastHistoryName = document.getElementsByClassName("name-display")[1].textContent;
     let names = firstHistoryName + " " + lastHistoryName;
-    printHistory.push(names);
+    //printHistory.push(names);
+
+    
+    if (document.getElementById("first-name-result-biscuit").textContent === "Please try another biscuit.") {
+         printHistory.push();
+    } else {
+        printHistory.push(names)
+    } 
 
     for (i in printHistory) {
         document.getElementsByClassName("name-history-storage")[0].textContent = printHistory;
+        //document.getElementById("biscuit-name-history-storage").textContent = printHistory;
     }
-    
+
+    console.log(document.getElementsByClassName("name-history-storage")[1].textContent)
+   
 }
 
 /**
