@@ -73,6 +73,7 @@ function calculateAsciiValue() {
     }
 
     biscuitDivide = biscuitSum / 2;
+    console.log(biscuitSum);
     let biscNum1 = Math.floor(biscuitDivide / 42);
     let biscNum2 = Math.floor(biscuitDivide / 21);
     
