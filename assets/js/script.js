@@ -1,6 +1,9 @@
 wizardFirstNames = ["Scout", "Starmaker", "Ziggy", "Moonage", "Velvet", "Data", "Hoggle", "Rudi", "Izzy", "Genesis", "Groulf", "Ged", "Sparrowhawk", "Zorgon", "Neb", "Jesha", "Kin", "Lorsa", "Kay", "Emice", "Donn", "Klegg", "Bean", "Zues", "Alta", "Celestial", "Jatz", "Tam", "Merlyn", "Taliesin", "Spacedrop", "Oblivia", "Laser", "Action", "Sparky", "Ulgrub", "Ulm", "Germ", "Hobb", "Sneer", "Aborghast", "Mew", "Storm", "Geld", "Blue", "Winnifrederico", "Soup", "Jillius", "Lox", "Pollux", "Abie-See Diefgie", "Tomby", "Aeiou", "Xippy", "Zoot", "Poot", "Pteey", "Kompooter", "Book", "Vul", "Hoggard", "Furio", "Zemrak", "Nickel", "Apprentice", "Rona", "Neko", "Rouge", "Billiard", "Aster", "Student", "Rookie", "Novice", "Fledgling", "Stranger", "Outsider", "M.", "G.", "K.", "F.", "E.", "Pupil"];
 wizardLastNames = ["Rumbles", "Gorgonmitre", "Jupiter", "Stardust", "Glass", "Blackout", "Daydream", "Smith", "The Night Bringer", "The Day Waker", "Genesis", "The Garrulous", "Of The Adler Groves", "Of The Deep Forests", "Of The Underbrush", "Of The Deep Places", "Of The Dark Dank", "The Eldest", "The Elder", "The Young", "The Middle", "The Last", "The Wizened", "The Feeble", "The Feral", "The Knotty", "The Friable", "Of Horndown", "The Wet", "The Moist", "The Moister", "With the Mostest", "The Cantankerous", "The Dulcet", "The Ghastly", "Of The Long Spindle", "Of The Dells", "Of Widow's Peak", "Of Glendale, CA", "With The Short Cane", "The Long of Neck, Humped of Back", "The Wyrd", "The Not-Terrible", "The Amazing Fantastic Excellent Very Good", "The Intergalactic", "The Nefarious", "The Relentless", "The Cryptic", "42", "The Luminuous", "The Shimmerer", "The Mathemagician", "The Ordinary", "Devourer Of Nibbles", "The Betrayer", "The Unassuming", "Of Many Hats", "Percival", "Hoarder of Shiny Things", "The Most Stinky", "Of The Pub Around The Corner", "The Extravagant", "The Perpetually Miffed", "The Vile", "The Sneaky", "Who Flees Before Small Canines", "Liberator of Cockroaches", "The Snarky", "The Smug", "Who You've Probably Never Heard Of But I'm Really Super Famous In Flurgleburg, I Swear", "Splonk", "Stubb", "Weaver of Despair and Baskets", "Of Chains", "The Dumpy", "The Thicc", "Of The Sun", "The Tight Lipped", "Master of Destruction", "Tamer Of Things That Need Taming", "The Balls", "Starlight", "Eater of Peanuts", "The Sparkly", "The Engulfed", "The Sexy", "The Boring", "The User Of Puppets", "Of Lasers", "Fire-eater", "Master of Various Liquids", "Earthen Fist", "The Light", "Blight-Befaller", "Pestilence", "Shockmaster", "The Drowned", "The Triggered", "Of Fanciness", "The Fancy", "The Forgetful", "Death Denier", "The Nosy", "Mousemaster", "Of The Fairies", "Of The Merpeople", "Cyclops Slayer", "User of Tiny Things", "The Perpetually Sleepy"];
 let printHistory = [];
+//biscuitVar = document.getElementById("biscuit-input").value;
+//let nameHistory = "";
+
 
 document.addEventListener("DOMContentLoaded", function() {
 
@@ -19,6 +22,9 @@ document.addEventListener("DOMContentLoaded", function() {
         }
     })
     
+    document.querySelector(".first").addEventListener('click', function(){
+        Swal.fire("Our First Alert");
+      });
 
 })
 
@@ -50,9 +56,9 @@ function startRoll() {
  */
 function biscuitRoll() {
 
-    biscuitVar = document.getElementById("biscuit-input").value;
+    biscuitInput = document.getElementById("biscuit-input").value;
     
-    if (biscuitVar == "Jaffa Cakes" || biscuitVar == "jaffa cakes" || biscuitVar == "jaffacakes" || biscuitVar == "Jaffa cakes") {
+    if (biscuitInput == "Jaffa Cakes" || biscuitInput == "jaffa cakes" || biscuitInput == "jaffacakes" || biscuitInput == "Jaffa cakes") {
         alert("Is that really a biscuit? I find no name here in that file. Please roll again.");
     } else {
         calculateAsciiValue();
@@ -61,24 +67,27 @@ function biscuitRoll() {
 }
 
 /**
- * Function to calculate the ASCII value of the user input 
+ * Function to calculate the ASCII value of the user input, if the user has provided an input. 
  */
 function calculateAsciiValue() {
 
-    let biscuitSum = 0;
+    biscuitVar = document.getElementById("biscuit-input").value;
 
-    for (i in biscuitVar) {
-        let x = biscuitVar.charCodeAt(i);
-        biscuitSum += x
-    }
+    if (biscuitVar.length > 0) {
+        let biscuitSum = 0;
 
-    biscuitDivide = biscuitSum / 2;
-    console.log(biscuitSum);
-    let biscNum1 = Math.floor(biscuitDivide / 42);
-    let biscNum2 = Math.floor(biscuitDivide / 21);
+        for (i in biscuitVar) {
+            let x = biscuitVar.charCodeAt(i);
+            biscuitSum += x
+        }
+
+        biscuitDivide = biscuitSum / 2;
+        let biscNum1 = Math.floor(biscuitDivide / 42);
+        let biscNum2 = Math.floor(biscuitDivide / 21);
     
-    document.getElementById("first-name-result-biscuit").textContent = `${(wizardFirstNames[biscNum1])}`;
-    document.getElementById("last-name-result-biscuit").textContent = `${(wizardLastNames[biscNum2])}`;
+        document.getElementById("first-name-result-biscuit").textContent = `${(wizardFirstNames[biscNum1])}`;
+        document.getElementById("last-name-result-biscuit").textContent = `${(wizardLastNames[biscNum2])}`;
+    }
 
 }
 
@@ -126,9 +135,12 @@ function displayNameHistory() {
     } 
 
     for (i in printHistory) {
+        //nameHistory += `<li>${printHistory[i]}</li>`;
         document.getElementsByClassName("name-history-storage")[0].textContent = printHistory;
+        //document.createElement("BR")
+        
     }
-   
+  
 }
 
 /**
