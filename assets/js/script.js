@@ -38,12 +38,10 @@ function startRoll() {
         asciiCeilingError();
         displayNameHistory();
         resetNameHistory();
-        //printErrors();
     } else if (this.getAttribute("roll-type") === "wildcard") {
         wildcardRoll()
         displayNameHistory();
         resetNameHistory();
-        //printErrors();
     } else {
         alert(`Unknown roll.`);
         throw `Unknown roll.`;
@@ -151,7 +149,7 @@ function displayNameHistory() {
  */
 function resetNameHistory() {
 
-    if (printHistory.length >= 5) {
+    if (printHistory.length >= 6) {
         alert(`Your wizardex is full and will be erased on next roll. If you would like to grab a quill and make note of the names you have generated so far, they are: ${printHistory}`);
         printHistory = [];
     }

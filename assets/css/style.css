@@ -98,6 +98,10 @@ footer {
 
 .game-container {
     text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-content: center;
+    margin: 0 auto;
 }
 
 .name-display, .history-display {
@@ -114,11 +118,11 @@ footer {
 button {
     background-color: rgba(0, 0, 0, 0);
     border: none;
+}
+
+button img {
     width: 100px;
     height: 100px;
-    display: flex;
-    align-content: center;
-    margin: 0 auto;
 }
 
 /* Styling for Biscuit Mode page*/

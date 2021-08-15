@@ -133,6 +133,7 @@ GitHub - for hosting the site
 GitPages - for the deployment of the site
 
 Gitpod - for editing the files
+Photo Editing - 
 
 ### Testing 
 
@@ -194,4 +195,6 @@ Within the repository, click the 'Code' dropdown, which is located next to 'Add 
 In the same 'Code' dropdown, you can opt to open the code with GitHub Desktop and work from there.
 
 Credits (content and media)
-names - crowdsourced - Una, mum, Donal, Glenn, Fin
+names - crowdsourced - Una, mum, Donal, Glenn, Fin, Anthea, Johnny
+Dice/D20 image - Pexel/Alexis Designs
+Code for sticky footer sourced from Css Tricks - https://css-tricks.com/couple-takes-sticky-footer/*/
