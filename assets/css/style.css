@@ -104,14 +104,14 @@ footer {
     margin: 0 auto;
 }
 
-.name-display, .history-display {
+.name-display {
     display: flex;
     display: inline;
     flex-direction: row;
     align-content: center;
 }
 
-.name-display, .history-display {
+.name-display {
     font-size: 1.5em;
 }
 
@@ -125,12 +125,13 @@ button img {
     height: 100px;
 }
 
-.dice-right {
-    background: url(../images/d20-bw-right.png);
-    width: 100px;
-    height: 100px;
-    background-color: rgba(0, 0, 0, 0);
-    border: none;
+.name-history li {
+    list-style-type: none;
+}
+
+.name-history-storage p {
+    display: flex;
+    flex-direction: column;
 }
 
 /* Styling for Biscuit Mode page*/
