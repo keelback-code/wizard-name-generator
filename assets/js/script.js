@@ -1,30 +1,48 @@
-wizardFirstNames = ["Scout", "Starmaker", "Ziggy", "Moonage", "Velvet", "Data", "Hoggle", "Rudi", "Izzy", "Genesis", "Groulf", "Ged", "Sparrowhawk", "Zorgon", "Neb", "Jesha", "Kin", "Lorsa", "Kay", "Emice", "Donn", "Klegg", "Bean", "Zues", "Alta", "Celestial", "Jatz", "Tam", "Merlyn", "Taliesin", "Spacedrop", "Oblivia", "Laser", "Action", "Sparky", "Ulgrub", "Ulm", "Germ", "Hobb", "Sneer", "Aborghast", "Mew", "Storm", "Geld", "Blue", "Winnifrederico", "Soup", "Jillius", "Lox", "Pollux", "Abie-See Diefgie", "Tomby", "Aeiou", "Xippy", "Zoot", "Poot", "Pteey", "Kompooter", "Book", "Vul", "Hoggard", "Furio", "Zemrak", "Nickel", "Apprentice", "Rona", "Neko", "Rouge", "Billiard", "Aster", "Student", "Rookie", "Novice", "Fledgling", "Stranger", "Outsider", "M.", "G.", "K.", "F.", "E.", "Pupil"];
+wizardFirstNames = ["Scout", "Starmaker", "Ziggy", "Moonage", "Velvet", "Data", "Hoggle", "Rudi", "Izzy", "Genesis", "Groulf", "Ged", "Sparrowhawk", "Zorgon", "Neb", "Jesha", "Kin", "Lorsa", "Kay", "Emice", "Donn", "Klegg", "Bean", "Zues", "Alta", "Celestial", "Jatz", "Tam", "Merlyn", "Taliesin", "Spacedrop", "Oblivia", "Laser", "Action", "Sparky", "Ulgrub", "Ulm", "Germ", "Hobb", "Sneer", "Aborghast", "Mew", "Storm", "Geld", "Blue", "Winnifrederico", "Soup", "Jillius", "Lox", "Pollux", "Abie-See Diefgie", "Tomby", "Aeiou", "Xippy", "Zoot", "Poot", "Pteey", "Kompooter", "Book", "Vul", "Hoggard", "Furio", "Zemrak", "Nickel", "Apprentice", "Rona", "Neko", "Rouge", "Billiard", "Aster", "Student", "Rookie", "Novice", "Fledgling", "Stranger", "Outsider", "M.", "G.", "K.", "F.", "E.", "Pupil", "Buttoncup"];
 wizardLastNames = ["Rumbles", "Gorgonmitre", "Jupiter", "Stardust", "Glass", "Blackout", "Daydream", "Smith", "The Night Bringer", "The Day Waker", "Genesis", "The Garrulous", "Of The Adler Groves", "Of The Deep Forests", "Of The Underbrush", "Of The Deep Places", "Of The Dark Dank", "The Eldest", "The Elder", "The Young", "The Middle", "The Last", "The Wizened", "The Feeble", "The Feral", "The Knotty", "The Friable", "Of Horndown", "The Wet", "The Moist", "The Moister", "With the Mostest", "The Cantankerous", "The Dulcet", "The Ghastly", "Of The Long Spindle", "Of The Dells", "Of Widow's Peak", "Of Glendale, CA", "With The Short Cane", "The Long of Neck, Humped of Back", "The Wyrd", "The Not-Terrible", "The Amazing Fantastic Excellent Very Good", "The Intergalactic", "The Nefarious", "The Relentless", "The Cryptic", "42", "The Luminuous", "The Shimmerer", "The Mathemagician", "The Ordinary", "Devourer Of Nibbles", "The Betrayer", "The Unassuming", "Of Many Hats", "Percival", "Hoarder of Shiny Things", "The Most Stinky", "Of The Pub Around The Corner", "The Extravagant", "The Perpetually Miffed", "The Vile", "The Sneaky", "Who Flees Before Small Canines", "Liberator of Cockroaches", "The Snarky", "The Smug", "Who You've Probably Never Heard Of But I'm Really Super Famous In Flurgleburg, I Swear", "Splonk", "Stubb", "Weaver of Despair and Baskets", "Of Chains", "The Dumpy", "The Thicc", "Of The Sun", "The Tight Lipped", "Master of Destruction", "Tamer Of Things That Need Taming", "The Balls", "Starlight", "Eater of Peanuts", "The Sparkly", "The Engulfed", "The Sexy", "The Boring", "The User Of Puppets", "Of Lasers", "Fire-eater", "Master of Various Liquids", "Earthen Fist", "The Light", "Blight-Befaller", "Pestilence", "Shockmaster", "The Drowned", "The Triggered", "Of Fanciness", "The Fancy", "The Forgetful", "Death Denier", "The Nosy", "Mousemaster", "Of The Fairies", "Of The Merpeople", "Cyclops Slayer", "User of Tiny Things", "The Perpetually Sleepy"];
 let printHistory = [];
+
 
 document.addEventListener("DOMContentLoaded", function() {
 
     let dice = document.getElementsByTagName("button");
+    let diceRight = document.createElement("img");
+    
 
     for (let die of dice) {
         die.addEventListener('click', startRoll);
+        document.getElementsByTagName("button").appendChild(diceRight);
+        diceRight.classList.toggle("dice-right");
     }
 
+    //let diceRight = document.createElement("img");
+
+    //diceRight.addEventListener("click", function() {
+    //    diceRight.classList.toggle("dice-right");
+    //})
+
     document.getElementById("biscuit-input").addEventListener("keydown", function(event) {
-        if (event.key === "Enter") {
-            biscuitRoll();
-            asciiCeilingError();
-            displayNameHistory();
-            resetNameHistory();
-            printErrors();
-        }
-    })
+    if (event.key === "Enter") {
+        biscuitRoll();
+        asciiCeilingError();
+        displayNameHistory();
+        resetNameHistory();
+    }
+})
     
-    document.querySelector(".first").addEventListener('click', function(){
-        Swal.fire("Our First Alert");
-      });
 
 })
+
+
+//let biscuitListen = document.getElementById("biscuit-input");
+//if (biscuitListen.length > 0) {
+  //  console.log("biscuit listen works");
+    //biscuitListen.addEventListener("keydown", function(event) {
+      //  if (event.key === "Enter") {
+        //    startRoll;
+       // }
+   // })
+//}
 
 
    
@@ -133,25 +151,55 @@ function displayNameHistory() {
     } 
 
     for (i in printHistory) {
-            document.getElementsByClassName("name-history-storage")[0].textContent = printHistory;   
+       document.getElementsByClassName("name-history-storage")[0].innerHTML = ` ${printHistory} `; 
     }
 
-        //nameHistory += `<li>${printHistory[i]}</li>`;
-        
-        //document.createElement("BR")
-        
+
+
+
+
     
+    //let nameForList = printHistory[printHistory.length - 1];
+    //console.log(nameForList);
+    //let li = document.createElement("li");
+    //ul.appendChild(li);
+
+    //li += printHistory;
+    //let nameForList = printHistory[printHistory.length - 1];
+    //li.textContent = nameForList;
+
+    //let ul = document.createElement("ul");
+    //document.getElementsByClassName("name-history-storage")[0].appendChild(ul);
+
+    //printHistory.forEach(function (name) {
+    //    let li = document.createElement("li");
+     //   ul.appendChild(li);
+
+      //  li.textContent += name;
+        
+    //});
+  
   
 }
 
 /**
- * Function to alert user once name history has reached cap of five names, and to reset history.
+ * Function to alert user once name history has reached a cap, and to reset history.
  */
 function resetNameHistory() {
 
     if (printHistory.length >= 6) {
-        alert(`Your wizardex is full and will be erased on next roll. If you would like to grab a quill and make note of the names you have generated so far, they are: ${printHistory}`);
+        alert(`Your wizardex is full and will be erased on your next roll. If you would like to grab a quill and make note of the names you have generated so far, they are: ${printHistory}`);
         printHistory = [];
     }
+
+}
+
+function animateDice() {
+
+    let diceRight = document.createElement("img");
+
+    diceRight.addEventListener("click", function() {
+        diceRight.classList.toggle("dice-right");
+    })
 
 }

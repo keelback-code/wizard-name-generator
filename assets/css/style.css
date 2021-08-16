@@ -125,6 +125,14 @@ button img {
     height: 100px;
 }
 
+.dice-right {
+    background: url(../images/d20-bw-right.png);
+    width: 100px;
+    height: 100px;
+    background-color: rgba(0, 0, 0, 0);
+    border: none;
+}
+
 /* Styling for Biscuit Mode page*/
 
 .roll h3, .name-printout h4 {

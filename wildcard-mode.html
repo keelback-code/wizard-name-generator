@@ -34,22 +34,24 @@
     <div class="game-container">
         <div class="roll">
             <h2>Roll the Dice!</h2>
-            <button id="wildcard-roll" roll-type="wildcard">
-                <img src="assets/images/d20-bw.png" alt="A D20 dice; click to roll!">
+            <button id="wildcard-roll" class="roll" roll-type="wildcard">
+                <a href="#" onclick="assets/images/d20-bw-right.png">
+                    <img src="assets/images/d20-bw.png" alt="A D20 dice; click to roll!">
+                </a>
             </button>
         </div>
 
         <div class="name-printout">
             <h3>Your new name is:</h3>
-            <p id="first-name-result-wildcard" class="name-display" name-type="first-name"></p>
-            <p id="last-name-result-wildcard" class="name-display" name-type="last-name"></p>
+            <p id="first-name-result-wildcard" class="name-display"></p>
+            <p id="last-name-result-wildcard" class="name-display"></p>
         </div>
 
         <div class="name-history">
             <h4>Name history:</h4>
-            <ul id="wildcard-name-history-storage" class="name-history-storage" name-type="history">
-                <li></li>
-            </ul>
+            <p id="wildcard-name-history-storage" class="name-history-storage">
+
+            </p>
         </div>
     </div>
 
