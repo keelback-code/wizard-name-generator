@@ -88,7 +88,7 @@ Footer with links to social media, which will open in a new tab with aria labels
 
 ### Landing page
 
-Links to each mode
+Links to each mode.
 
 ### Biscuit Mode and Wildcard Mode pages
 
@@ -112,6 +112,7 @@ If the ASCII value is too great for the equation an error alert will be generate
 Link to the ASCII Wikipedia page for users who are interested in the process
 
 ### Technologies
+
 Languages used:
 
 HTML5
@@ -133,7 +134,8 @@ GitHub - for hosting the site
 GitPages - for the deployment of the site
 
 Gitpod - for editing the files
-Photo Editing - 
+
+Photo Editing - for editing the D20 dice image
 
 ### Testing 
 
@@ -141,60 +143,73 @@ tbc
 
 ### User Stories Testing
 A first time user looking to play the game:
-I want to easily understand the content and layout of the site
+* I want to easily understand the content and layout of the site
 Simple and clear flow to site, simple instructions on how to play the game
-I want to intuitively navigate the site to browse content
+* I want to intuitively navigate the site to browse content
 Simple landing page with links to both modes, nav bar on Biscuit and Wildcard pages
-I want to be able to access and use the website as intended on any device
+* I want to be able to access and use the website as intended on any device
 Responsive design, including simple layout for most content, and hamburger for nav bar mobile and tablet
-I want multiple options for name generation
+* I want multiple options for name generation
 Biscuit (ASCII) mode and Wildcard mode
-I want the previous names to be displayed on the screen so that I can ‘roll’ again
+* I want the previous names to be displayed on the screen so that I can ‘roll’ again
 History section which will display name history (up to 5 names)
-I want to be warned if the names are going to be removed from the screen
+* I want to be warned if the names are going to be removed from the screen
 When History section is full, alert will pop up letting user know that the history will be emptied. The alert will also display the names from the history so far for the user to record. 
-I want to be able to contact the owner on social media
+* I want to be able to contact the owner on social media
 Links to social media in footer
 
 A returning user looking to play the game again:
-I want multiple options for name generation
+* I want multiple options for name generation
 Biscuit (ASCII) mode and Wildcard mode
-I want a large range of names so that I will not quickly run out of names
+* I want a large range of names so that I will not quickly run out of names
 Extensive arrays of first and last wizard names, with randomized results for Wildcard option, and the Biscuit mode takes inputs beyond biscuit names if the user wants to enter other words/characters.
 
 A disabled user who is new or returning to the site:
-I want to be able to access and use the site in the same way as any of the aforementioned users
+* I want to be able to access and use the site in the same way as any of the aforementioned users
 Semantic HTML and extensive aria labels used throughout site
 
 As the owner of the site:
-I want users to be able to use the site easily and intuitively
+* I want users to be able to use the site easily and intuitively
 Simple and clear flow to site, simple instructions on how to play the game, clear navigational links throughout site
-I want users to be able to easily generate and find names
+* I want users to be able to easily generate and find names
 Two fun and easy modes for generating random names for multiple purposes
-I want to create a gender neutral site
+* I want to create a gender neutral site
 All names are gender neutral or gender-ambiguous, and there is no option to choose a gender before generating a name
-I want to provide the same experience for all users
+* I want to provide the same experience for all users
 Semantic HTML and extensive aria labels used throughout site
 
-
-Debugging and known bugs
+### Debugging and known bugs
 tbc
-Deployment
-Publishing
-The project was deployed using GitHub pages. The steps to deploy using GitHub pages are:
-In the repository, click the 'Settings' tab, which is the furthest to the right
-Scroll down until you see the 'Pages' tab, which will be in the menu on the left hand side
-Underneath the 'Source' heading, open the drop down and choose the 'master' branch to build from
-Click 'Save' and the site link will appear in a blue box. After a few moments the box will turn green and then the site will be live.
-The live link is: 
-Forking and Cloning
-To save a copy of the code and work on it yourself, here are the steps for forking and cloning using Github:
-In the repository, click the 'Fork' button, which is on the top right hand side, next to 'Star'.
-Github will automatically create a new repo, which is forked from the original. If you would like to clone it you have two options:
-Within the repository, click the 'Code' dropdown, which is located next to 'Add File' on the right (underneath the Settings tab); there is an option to download all files and save a copy locally.
-In the same 'Code' dropdown, you can opt to open the code with GitHub Desktop and work from there.
 
-Credits (content and media)
+### Deployment
+
+Publishing
+
+The project was deployed using GitHub pages. The steps to deploy using GitHub pages are:
+
+* In the repository, click the 'Settings' tab, which is the furthest to the right
+
+* Scroll down until you see the 'Pages' tab, which will be in the menu on the left hand side
+
+* Underneath the 'Source' heading, open the drop down and choose the 'master' branch to build from
+
+* Click 'Save' and the site link will appear in a blue box. After a few moments the box will turn green and then the site will be live.
+
+The live link is:
+
+Forking and Cloning
+
+To save a copy of the code and work on it yourself, here are the steps for forking and cloning using Github:
+
+* In the repository, click the 'Fork' button, which is on the top right hand side, next to 'Star'.
+
+Github will automatically create a new repo, which is forked from the original. If you would like to clone it you have two options:
+
+* Within the repository, click the 'Code' dropdown, which is located next to 'Add File' on the right (underneath the Settings tab); there is an option to download all files and save a copy locally.
+
+* In the same 'Code' dropdown, you can opt to open the code with GitHub Desktop and work from there.
+
+### Credits (content and media)
 names - crowdsourced - Una, mum, Donal, Glenn, Fin, Anthea, Johnny
 Dice/D20 image - Pexel/Alexis Designs
 Code for sticky footer sourced from Css Tricks - https://css-tricks.com/couple-takes-sticky-footer/*/
