@@ -148,40 +148,66 @@ tbc
 
 ### User Stories Testing
 A first time user looking to play the game:
-* I want to easily understand the content and layout of the site
-Simple and clear flow to site, simple instructions on how to play the game
-* I want to intuitively navigate the site to browse content
-Simple landing page with links to both modes, nav bar on Biscuit and Wildcard pages
-* I want to be able to access and use the website as intended on any device
-Responsive design, including simple layout for most content, and hamburger for nav bar mobile and tablet
-* I want multiple options for name generation
-Biscuit (ASCII) mode and Wildcard mode
-* I want the previous names to be displayed on the screen so that I can ‘roll’ again
-History section which will display name history (up to 5 names)
-* I want to be warned if the names are going to be removed from the screen
-When History section is full, alert will pop up letting user know that the history will be emptied. The alert will also display the names from the history so far for the user to record. 
-* I want to be able to contact the owner on social media
-Links to social media in footer
+
+*I want to easily understand the content and layout of the site*
+* Simple and clear flow to site, simple instructions on how to play the game
+
+*I want to intuitively navigate the site to browse content*
+* Simple landing page with links to both modes, nav bar on Biscuit and Wildcard pages
+
+*I want to be able to access and use the website as intended on any device*
+
+* Responsive design, including simple layout for content
+
+*I want multiple options for name generation*
+
+* Biscuit (ASCII) mode and Wildcard mode
+
+*I want the previous names to be displayed on the screen so that I can ‘roll’ again*
+
+* History section which will display name history 
+
+*I want to be warned if the names are going to be removed from the screen*
+
+* When History section is full, alert will pop up letting user know that the history will be emptied. The alert will also display the names from the history so far for the user to record. 
+
+*I want to be able to contact the owner on social media*
+
+* Links to social media in footer
 
 A returning user looking to play the game again:
-* I want multiple options for name generation
-Biscuit (ASCII) mode and Wildcard mode
-* I want a large range of names so that I will not quickly run out of names
-Extensive arrays of first and last wizard names, with randomized results for Wildcard option, and the Biscuit mode takes inputs beyond biscuit names if the user wants to enter other words/characters.
+
+*I want multiple options for name generation*
+
+* Biscuit (ASCII) mode and Wildcard mode
+
+*I want a large range of names so that I will not quickly run out of names*
+
+* Extensive arrays of first and last wizard names, with randomized results for Wildcard option, and the Biscuit mode takes inputs beyond biscuit names if the user wants to enter other words/characters. Equations are designed so that arrays can be added to at any time.
 
 A disabled user who is new or returning to the site:
-* I want to be able to access and use the site in the same way as any of the aforementioned users
-Semantic HTML and extensive aria labels used throughout site
+
+*I want to be able to access and use the site in the same way as any of the aforementioned users*
+
+* Semantic HTML and aria labels used throughout site, and site tested for accessibility as per testing section.
 
 As the owner of the site:
-* I want users to be able to use the site easily and intuitively
-Simple and clear flow to site, simple instructions on how to play the game, clear navigational links throughout site
-* I want users to be able to easily generate and find names
-Two fun and easy modes for generating random names for multiple purposes
-* I want to create a gender neutral site
-All names are gender neutral or gender-ambiguous, and there is no option to choose a gender before generating a name
-* I want to provide the same experience for all users
-Semantic HTML and extensive aria labels used throughout site
+
+*I want users to be able to use the site easily and intuitively*
+
+* Simple and clear flow to site, simple instructions on how to play the game, clear navigational links throughout site
+
+*I want users to be able to easily generate and find names*
+
+* Two fun and easy modes for generating random names for multiple purposes. All errors caught by functions.
+
+*I want to create a gender neutral site*
+
+* All names are gender neutral or gender-ambiguous, and there is no option to choose a gender before generating a name
+
+*I want to provide the same experience for all users*
+
+* Semantic HTML and aria labels used throughout site, and site tested for accessibility as per testing section.
 
 ### Debugging and known bugs
 tbc
