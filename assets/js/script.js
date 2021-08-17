@@ -1,8 +1,6 @@
 let wizardFirstNames = ["Scout", "Starmaker", "Ziggy", "Moonage", "Velvet", "Data", "Hoggle", "Rudi", "Izzy", "Genesis", "Groulf", "Ged", "Sparrowhawk", "Zorgon", "Neb", "Jesha", "Kin", "Lorsa", "Kay", "Emice", "Donn", "Klegg", "Bean", "Zues", "Alta", "Celestial", "Jatz", "Tam", "Merlyn", "Taliesin", "Spacedrop", "Oblivia", "Laser", "Action", "Sparky", "Ulgrub", "Ulm", "Germ", "Hobb", "Sneer", "Aborghast", "Mew", "Storm", "Geld", "Blue", "Winnifrederico", "Soup", "Jillius", "Lox", "Pollux", "Abie-See Diefgie", "Tomby", "Aeiou", "Xippy", "Zoot", "Poot", "Pteey", "Kompooter", "Book", "Vul", "Hoggard", "Furio", "Zemrak", "Nickel", "Apprentice", "Rona", "Neko", "Rouge", "Billiard", "Aster", "Student", "Rookie", "Novice", "Fledgling", "Stranger", "Outsider", "M.", "G.", "K.", "F.", "E.", "Pupil", "Buttoncup", "Elderbell"];
 let wizardLastNames = ["Rumbles", "Gorgonmitre", "Jupiter", "Stardust", "Glass", "Blackout", "Daydream", "Smith", "The Night Bringer", "The Day Waker", "Genesis", "The Garrulous", "Of The Adler Groves", "Of The Deep Forests", "Of The Underbrush", "Of The Deep Places", "Of The Dark Dank", "The Eldest", "The Elder", "The Young", "The Middle", "The Last", "The Wizened", "The Feeble", "The Feral", "The Knotty", "The Friable", "Of Horndown", "The Wet", "The Moist", "The Moister", "With the Mostest", "The Cantankerous", "The Dulcet", "The Ghastly", "Of The Long Spindle", "Of The Dells", "Of Widow's Peak", "Of Glendale, CA", "With The Short Cane", "The Long of Neck, Humped of Back", "The Wyrd", "The Not-Terrible", "The Amazing Fantastic Excellent Very Good", "The Intergalactic", "The Nefarious", "The Relentless", "The Cryptic", "42", "The Luminuous", "The Shimmerer", "The Mathemagician", "The Ordinary", "Devourer Of Nibbles", "The Betrayer", "The Unassuming", "Of Many Hats", "Percival", "Hoarder of Shiny Things", "The Most Stinky", "Of The Pub Around The Corner", "The Extravagant", "The Perpetually Miffed", "The Vile", "The Sneaky", "Who Flees Before Small Canines", "Liberator of Cockroaches", "The Snarky", "The Smug", "Who You've Probably Never Heard Of But I'm Really Super Famous In Flurgleburg, I Swear", "Splonk", "Stubb", "Weaver of Despair and Baskets", "Of Chains", "The Dumpy", "The Thicc", "Of The Sun", "The Tight Lipped", "Master of Destruction", "Tamer Of Things That Need Taming", "The Balls", "Starlight", "Eater of Peanuts", "The Sparkly", "The Engulfed", "The Sexy", "The Boring", "The User Of Puppets", "Of Lasers", "Fire-eater", "Master of Various Liquids", "Earthen Fist", "The Light", "Blight-Befaller", "Pestilence", "Shockmaster", "The Drowned", "The Triggered", "Of Fanciness", "The Fancy", "The Forgetful", "Death Denier", "The Nosy", "Mousemaster", "Of The Fairies", "Of The Merpeople", "Cyclops Slayer", "User of Tiny Things", "The Perpetually Sleepy"];
 let printHistory = [];
-let biscuitInput = document.getElementById("biscuit-input").value;
-
 
 document.addEventListener("DOMContentLoaded", function() {
 
@@ -16,7 +14,8 @@ document.addEventListener("DOMContentLoaded", function() {
     if (event.key === "Enter") {
         biscuitRoll();
         asciiCeilingError();
-        displayNameHistory();
+        createNameArray();
+        checkForBiscuitInput();
         resetNameHistory();
     }
 });
@@ -32,11 +31,13 @@ function startRoll() {
     if (this.getAttribute("roll-type") === "biscuit") {
         biscuitRoll();
         asciiCeilingError();
-        displayNameHistory();
+        createNameArray();
+        checkForBiscuitInput();
         resetNameHistory();
     } else if (this.getAttribute("roll-type") === "wildcard") {
         wildcardRoll();
-        displayNameHistory();
+        createNameArray();
+        createDisplayHTML();
         resetNameHistory();
     } else {
         alert(`Unknown roll.`);
@@ -50,7 +51,7 @@ function startRoll() {
  */
 function biscuitRoll() {
 
-    //let biscuitInput = document.getElementById("biscuit-input").value;
+    let biscuitInput = document.getElementById("biscuit-input").value;
     
     if (biscuitInput == "Jaffa Cakes" || biscuitInput == "jaffa cakes" || biscuitInput == "jaffacakes" || biscuitInput == "Jaffa cakes") {
         alert("Is that really a biscuit? I find no name here in that file. Please roll again.");
@@ -115,9 +116,9 @@ function wildcardRoll() {
 }
 
 /**
- * Function to display name history and store it in an array. Will not add error message from asciiCeilingError function to display or empty strings.
+ * Function to display name history and store it in an array. Will not add error message from asciiCeilingError function to display or empty strings. Also checks for input in Biscuit mode before displaying names.
  */
-function displayNameHistory() {
+function createNameArray() {
 
     let firstHistoryName = document.getElementsByClassName("name-display")[0].textContent;
     let lastHistoryName = document.getElementsByClassName("name-display")[1].textContent;
@@ -128,18 +129,29 @@ function displayNameHistory() {
     } else {
         printHistory.push(names);
     } 
-
-    if (biscuitInput.length > 0) {
-        let li = document.createElement("li");
-        document.getElementsByClassName("name-history-storage")[0].appendChild(li); 
-        li.textContent += printHistory[printHistory.length - 1]; 
-        console.log(printHistory);
-    } else {
-        alert("Hey! You have to enter a biscuit name before you can roll! Go back and try again! Please. (Cookies and crackers also accepted.)")
-    }
-    
-      
+     
 } 
+
+function createDisplayHTML() {
+
+    let li = document.createElement("li");
+    document.getElementsByClassName("name-history-storage")[0].appendChild(li); 
+    li.textContent += printHistory[printHistory.length - 1]; 
+    console.log(printHistory);
+
+}
+
+function checkForBiscuitInput() {
+
+    let checkForBiscuitInput = document.getElementById("biscuit-input").value;
+
+    if (checkForBiscuitInput.length > 0) {
+        createDisplayHTML();
+    } else {
+        alert("Hey! You have to enter a biscuit name before you can roll! Go back and try again! Please. (Cookies and crackers also accepted.)");
+    } 
+
+}
 
 /**
  * Function to alert user once name history has reached a cap, and to reset history.
