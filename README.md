@@ -84,7 +84,7 @@ all pages, per page
 ### Features across all pages
 Clear header, making the purpose clear to users of the site.
 
-Footer with links to social media, which will open in a new tab with aria labels announcing this
+Footer with links to social media, which will open in a new tab with aria labels announcing this. In keeping with the retro design of the site, the links will be for MySpace, Deviantart and LiveJournal (all still active).
 
 ### Landing page
 
