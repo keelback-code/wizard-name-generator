@@ -137,6 +137,10 @@ button img {
     font-size: 1.2em;
 }
 
+.biscuit-input a {
+    text-decoration: underline;
+}
+
 /* Styling for Wildcard Mode page only*/
 
 .name-printout h3 {
@@ -174,6 +178,10 @@ button img {
     .game-container {
         padding-top: 20px;  
     }
+
+    .biscuit-input h2 {
+        font-size: 1.2em;
+    }
 }
 
 /*Queries for screen sizes smaller than 450px*/
@@ -186,20 +194,18 @@ button img {
     .site-header {
         text-align: center;
     }
+    
+    .site-header li {  
+        margin-right: 15px;    
+    }
 
     .mode-header-text {
         font-size: 0.75em;
     }
     
-    .game-container {
-        clear: both;
-        display: block;
-    }
-
     .biscuit-input h2 {
         font-size: 1.2em;
     }
-    
 }
 
 
