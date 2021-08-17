@@ -160,12 +160,27 @@ button img {
     }
 }
 
+/*Queries for screen sizes smaller than 800px*/
+
+@media screen and (max-width: 800px) {
+    .nav-bar ul {
+        margin: 0 auto;   
+    }
+
+    .nav-bar li {
+        padding-top: 0;
+    }
+
+    .game-container {
+        padding-top: 20px;  
+    }
+}
+
 /*Queries for screen sizes smaller than 500px*/
 
 @media screen and (max-width: 500px) {
     .landing-header {
-        text-align: center;
-        
+        text-align: center;  
     }
 }
 
