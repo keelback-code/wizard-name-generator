@@ -127,18 +127,10 @@ function displayNameHistory() {
         printHistory.push(names);
     } 
 
-
-    document.getElementsByClassName("name-history-storage")[0].innerHTML = printHistory; 
-
-    let ul = document.createElement("ul");
-    document.getElementsByClassName("name-history-storage")[0].appendChild(ul);
-
-    printHistory.forEach(function (name) {
-        let li = document.createElement("li");
-        ul.appendChild(li);   
-        li.textContent += name; 
-    });
-   
+    let li = document.createElement("li");
+    document.getElementsByClassName("name-history-storage")[0].appendChild(li); 
+    li.textContent += printHistory[printHistory.length - 1]; 
+      
 } 
 
 /**

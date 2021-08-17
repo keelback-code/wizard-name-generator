@@ -111,6 +111,11 @@ If the ASCII value is too great for the equation an error alert will be generate
 
 Link to the ASCII Wikipedia page for users who are interested in the process
 
+### Future Implementations
+
+In the future I would like to use an external library, such as Sweet Alert, to style the Javascript alerts to match the design of the site.
+I would also like to use Javascript to animate the dice, either toggling images or using sprites.
+
 ### Technologies
 
 Languages used:
