@@ -69,7 +69,7 @@ function calculateAsciiValue() {
     if (biscuitVar.length > 0) {
         let biscuitSum = 0;
 
-        for (let i in biscuitVar) {
+        for (let i of biscuitVar) {
             let x = biscuitVar.charCodeAt(i);
             biscuitSum += x;
         }

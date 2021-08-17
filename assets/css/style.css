@@ -52,7 +52,6 @@ footer {
     align-items: flex-end;
     justify-content: center;
     flex-wrap: wrap;
-    text-align: center;
 }
 
 .landing-header a {
@@ -151,13 +150,22 @@ button img {
 /*Media queries*/
 
 /*Queries for screen sizes smaller than 980px*/
-/*for media query for landing link, get rid of margin??*/
 
 @media screen and (max-width: 980px) {
     .landing-links {
         display: flex;
         flex-flow: column wrap;
-        justify-content:flex-start;    
+        justify-content:flex-start;
+        margin: 0 auto;    
+    }
+}
+
+/*Queries for screen sizes smaller than 500px*/
+
+@media screen and (max-width: 500px) {
+    .landing-header {
+        text-align: center;
+        
     }
 }
 
