@@ -182,5 +182,19 @@ button img {
     .landing-header {
         text-align: center;  
     }
+
+    .site-header {
+        text-align: center;
+    }
+
+    .mode-header-text {
+        font-size: 0.75em;
+    }
+    
+    .game-container {
+        clear: both;
+        display: block;
+    }
 }
+
 

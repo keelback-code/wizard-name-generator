@@ -142,9 +142,7 @@ function resetNameHistory() {
     if (printHistory.length >= 6) {
         alert(`Your wizardex is full and will be erased on your next roll. If you would like to grab a quill and make note of the names you have generated so far, they are: ${printHistory}`);
         printHistory = [];
-        document.getElementsByClassName("name-history-storage")[0].innerHTML = "";
-        
-        
+        document.getElementsByClassName("name-history-storage")[0].innerHTML = "";   
     }
 
 }
