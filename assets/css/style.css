@@ -176,9 +176,9 @@ button img {
     }
 }
 
-/*Queries for screen sizes smaller than 500px*/
+/*Queries for screen sizes smaller than 450px*/
 
-@media screen and (max-width: 500px) {
+@media screen and (max-width: 450px) {
     .landing-header {
         text-align: center;  
     }
