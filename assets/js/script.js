@@ -1,21 +1,22 @@
-let wizardFirstNames = ["Scout", "Starmaker", "Ziggy", "Moonage", "Velvet", "Data", "Hoggle", "Rudi", "Izzy", "Genesis", "Groulf", "Ged", "Sparrowhawk", "Zorgon", "Neb", "Jesha", "Kin", "Lorsa", "Kay", "Emice", "Donn", "Klegg", "Bean", "Zues", "Alta", "Celestial", "Jatz", "Tam", "Merlyn", "Taliesin", "Spacedrop", "Oblivia", "Laser", "Action", "Sparky", "Ulgrub", "Ulm", "Germ", "Hobb", "Sneer", "Aborghast", "Mew", "Storm", "Geld", "Blue", "Winnifrederico", "Soup", "Jillius", "Lox", "Pollux", "Abie-See Diefgie", "Tomby", "Aeiou", "Xippy", "Zoot", "Poot", "Pteey", "Kompooter", "Book", "Vul", "Hoggard", "Furio", "Zemrak", "Nickel", "Apprentice", "Rona", "Neko", "Rouge", "Billiard", "Aster", "Student", "Rookie", "Novice", "Fledgling", "Stranger", "Outsider", "M.", "G.", "K.", "F.", "E.", "Pupil", "Buttoncup", "Elderbell", "Jammie", "Dodgers", "Monte", "Danish"];
-let wizardLastNames = ["Rumbles", "Gorgonmitre", "Jupiter", "Stardust", "Glass", "Blackout", "Daydream", "Smith", "The Night Bringer", "The Day Waker", "Genesis", "The Garrulous", "Of The Adler Groves", "Of The Deep Forests", "Of The Underbrush", "Of The Deep Places", "Of The Dark Dank", "The Eldest", "The Elder", "The Young", "The Middle", "The Last", "The Wizened", "The Feeble", "The Feral", "The Knotty", "The Friable", "Of Horndown", "The Wet", "The Moist", "The Moister", "With the Mostest", "The Cantankerous", "The Dulcet", "The Ghastly", "Of The Long Spindle", "Of The Dells", "Of Widow's Peak", "Of Glendale, CA", "With The Short Cane", "The Long of Neck, Humped of Back", "The Wyrd", "The Not-Terrible", "The Amazing Fantastic Excellent Very Good", "The Intergalactic", "The Nefarious", "The Relentless", "The Cryptic", "42", "The Luminuous", "The Shimmerer", "The Mathemagician", "The Ordinary", "Devourer Of Nibbles", "The Betrayer", "The Unassuming", "Of Many Hats", "Percival", "Hoarder of Shiny Things", "The Most Stinky", "Of The Pub Around The Corner", "The Extravagant", "The Perpetually Miffed", "The Vile", "The Sneaky", "Who Flees Before Small Canines", "Liberator of Cockroaches", "The Snarky", "The Smug", "Who You've Probably Never Heard Of But I'm Really Super Famous In Flurgleburg, I Swear", "Splonk", "Stubb", "Weaver of Despair and Baskets", "Of Chains", "The Dumpy", "The Thicc", "Of The Sun", "The Tight Lipped", "Master of Destruction", "Tamer Of Things That Need Taming", "The Balls", "Starlight", "Eater of Peanuts", "The Sparkly", "The Engulfed", "The Sexy", "The Boring", "The User Of Puppets", "Of Lasers", "Fire-eater", "Master of Various Liquids", "Earthen Fist", "The Light", "Blight-Befaller", "Pestilence", "Shockmaster", "The Drowned", "The Triggered", "Of Fanciness", "The Fancy", "The Forgetful", "Death Denier", "The Nosy", "Mousemaster", "Of The Fairies", "Of The Merpeople", "Cyclops Slayer", "User of Tiny Things", "The Perpetually Sleepy", "Biscuit", "Cookies"];
+const wizardFirstNames = ["Scout", "Starmaker", "Ziggy", "Moonage", "Velvet", "Data", "Hoggle", "Rudi", "Izzy", "Genesis", "Groulf", "Ged", "Sparrowhawk", "Zorgon", "Neb", "Jesha", "Kin", "Lorsa", "Kay", "Emice", "Donn", "Klegg", "Bean", "Zues", "Alta", "Celestial", "Jatz", "Tam", "Merlyn", "Taliesin", "Spacedrop", "Oblivia", "Laser", "Action", "Sparky", "Ulgrub", "Ulm", "Germ", "Hobb", "Sneer", "Aborghast", "Mew", "Storm", "Geld", "Blue", "Winnifrederico", "Soup", "Jillius", "Lox", "Pollux", "Abie-See Diefgie", "Tomby", "Aeiou", "Xippy", "Zoot", "Poot", "Pteey", "Kompooter", "Book", "Vul", "Hoggard", "Furio", "Zemrak", "Nickel", "Apprentice", "Rona", "Neko", "Rouge", "Billiard", "Aster", "Student", "Rookie", "Novice", "Fledgling", "Stranger", "Outsider", "M.", "G.", "K.", "F.", "E.", "Pupil", "Buttoncup", "Elderbell", "Jammie", "Dodgers", "Monte", "Danish"];
+const wizardLastNames = ["Rumbles", "Gorgonmitre", "Jupiter", "Stardust", "Glass", "Blackout", "Daydream", "Smith", "The Night Bringer", "The Day Waker", "Genesis", "The Garrulous", "Of The Adler Groves", "Of The Deep Forests", "Of The Underbrush", "Of The Deep Places", "Of The Dark Dank", "The Eldest", "The Elder", "The Young", "The Middle", "The Last", "The Wizened", "The Feeble", "The Feral", "The Knotty", "The Friable", "Of Horndown", "The Wet", "The Moist", "The Moister", "With the Mostest", "The Cantankerous", "The Dulcet", "The Ghastly", "Of The Long Spindle", "Of The Dells", "Of Widow's Peak", "Of Glendale, CA", "With The Short Cane", "The Long of Neck, Humped of Back", "The Wyrd", "The Not-Terrible", "The Amazing Fantastic Excellent Very Good", "The Intergalactic", "The Nefarious", "The Relentless", "The Cryptic", "42", "The Luminuous", "The Shimmerer", "The Mathemagician", "The Ordinary", "Devourer Of Nibbles", "The Betrayer", "The Unassuming", "Of Many Hats", "Percival", "Hoarder of Shiny Things", "The Most Stinky", "Of The Pub Around The Corner", "The Extravagant", "The Perpetually Miffed", "The Vile", "The Sneaky", "Who Flees Before Small Canines", "Liberator of Cockroaches", "The Snarky", "The Smug", "Who You've Probably Never Heard Of But I'm Really Super Famous In Flurgleburg, I Swear", "Splonk", "Stubb", "Weaver of Despair and Baskets", "Of Chains", "The Dumpy", "The Thicc", "Of The Sun", "The Tight Lipped", "Master of Destruction", "Tamer Of Things That Need Taming", "The Balls", "Starlight", "Eater of Peanuts", "The Sparkly", "The Engulfed", "The Sexy", "The Boring", "The User Of Puppets", "Of Lasers", "Fire-eater", "Master of Various Liquids", "Earthen Fist", "The Light", "Blight-Befaller", "Pestilence", "Shockmaster", "The Drowned", "The Triggered", "Of Fanciness", "The Fancy", "The Forgetful", "Death Denier", "The Nosy", "Mousemaster", "Of The Fairies", "Of The Merpeople", "Cyclops Slayer", "User of Tiny Things", "The Perpetually Sleepy", "Biscuit", "Cookies"];
 let printHistory = [];
 
 document.addEventListener("DOMContentLoaded", function() {
 
-    let dice = document.getElementsByTagName("button");
- 
+    const dice = document.getElementsByTagName("button");
+    
     for (let die of dice) {
-        die.addEventListener('click', startRoll);   
+        die.addEventListener('click', startRoll);
     } 
 
     document.getElementById("biscuit-input").addEventListener("keydown", function(event) {
     if (event.key === "Enter") {
+        rotateDice();
         biscuitRoll();
         asciiCeilingError();
         createNameArray();
-        checkForBiscuitInput();
+        //checkForBiscuitInput();
         resetNameHistory();
     }
 });
@@ -29,12 +30,14 @@ document.addEventListener("DOMContentLoaded", function() {
 function startRoll() {
 
     if (this.getAttribute("roll-type") === "biscuit") {
+        rotateDice();
         biscuitRoll();
         asciiCeilingError();
         createNameArray();
-        checkForBiscuitInput();
+        //checkForBiscuitInput();
         resetNameHistory();
     } else if (this.getAttribute("roll-type") === "wildcard") {
+        rotateDice();
         wildcardRoll();
         createNameArray();
         createDisplayHTML();
@@ -46,6 +49,17 @@ function startRoll() {
 
 }
 
+function rotateDice() {
+
+    let rotationStart = 0;
+
+    document.getElementsByTagName("button")[0].addEventListener('click', function(){
+        rotationStart += 60;
+    document.getElementsByTagName("button")[0].style.transform = 'rotate(' + rotationStart + 'deg)';
+    })
+
+}
+
 /**
  * Function to begin biscuit mode; checks if user has entered input for Jaffa cakes, if not then runs calculateAsciiValue function.
  */
@@ -53,8 +67,10 @@ function biscuitRoll() {
 
     let biscuitInput = document.getElementById("biscuit-input").value;
     
-    if (biscuitInput == "Jaffa Cakes" || biscuitInput == "jaffa cakes" || biscuitInput == "jaffacakes" || biscuitInput == "Jaffa cakes") {
+    if (biscuitInput === "Jaffa Cakes" || biscuitInput === "jaffa cakes" || biscuitInput === "jaffacakes" || biscuitInput === "Jaffa cakes") {
         alert("Is that really a biscuit? I find no name here in that file. Please roll again.");
+    } else if (biscuitInput.length <= 0) {
+        alert("Hey! You have to enter a biscuit name before you can roll! Go back and try again! Please. (Cookies and crackers also accepted.)");
     } else {
         calculateAsciiValue();
     }
@@ -91,10 +107,10 @@ function calculateAsciiValue() {
  */
 function asciiCeilingError() {
 
-    let firstName = document.getElementById("first-name-result-biscuit").textContent;
-    let lastName = document.getElementById("last-name-result-biscuit").textContent;
+    const firstName = document.getElementById("first-name-result-biscuit").textContent;
+    const lastName = document.getElementById("last-name-result-biscuit").textContent;
 
-    if (firstName == "undefined" || lastName == "undefined") {
+    if (firstName === "undefined" || lastName === "undefined") {
         alert("Your word is too valuable! The gremlins have taken it; please enter a shorter word.");
         document.getElementById("first-name-result-biscuit").textContent = "Please try another biscuit.";
         document.getElementById("last-name-result-biscuit").textContent = "";
@@ -120,8 +136,8 @@ function wildcardRoll() {
  */
 function createNameArray() {
 
-    let firstHistoryName = document.getElementsByClassName("name-display")[0].textContent;
-    let lastHistoryName = document.getElementsByClassName("name-display")[1].textContent;
+    const firstHistoryName = document.getElementsByClassName("name-display")[0].textContent;
+    const lastHistoryName = document.getElementsByClassName("name-display")[1].textContent;
     let names = firstHistoryName + " " + lastHistoryName;
     
     if (firstHistoryName === "Please try another biscuit." || firstHistoryName === "" || lastHistoryName === "") {
@@ -132,24 +148,14 @@ function createNameArray() {
      
 } 
 
+/**
+ * Function to create list items and add them to the HTML, and display the name history in the list.
+ */
 function createDisplayHTML() {
 
-    let li = document.createElement("li");
+    const li = document.createElement("li");
     document.getElementsByClassName("name-history-storage")[0].appendChild(li); 
     li.textContent += printHistory[printHistory.length - 1]; 
-    console.log(printHistory);
-
-}
-
-function checkForBiscuitInput() {
-
-    let checkForBiscuitInput = document.getElementById("biscuit-input").value;
-
-    if (checkForBiscuitInput.length > 0) {
-        createDisplayHTML();
-    } else {
-        alert("Hey! You have to enter a biscuit name before you can roll! Go back and try again! Please. (Cookies and crackers also accepted.)");
-    } 
 
 }
 
