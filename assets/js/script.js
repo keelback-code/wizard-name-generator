@@ -51,6 +51,9 @@ function startRoll() {
 
 }
 
+/**
+ * Function to animate D20 button - code adapted from https://cloudinary.com/blog/rotating_images_in_javascript_three_quick_tutorials .
+ */
 function rotateDice() {
 
     document.getElementsByTagName("button")[0].addEventListener('click', function(){

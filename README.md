@@ -68,7 +68,14 @@ When researching wizard names I was instantly bombarded by sites advertising wiz
 
 ### Wireframes
 
-go here
+Landing page
+![Landing page](assets/images/readme-images/wireframe-landing-page.jpg)
+
+Biscuit Mode page
+![Biscuit Mode page](assets/images/readme-images/wireframe-biscuit-mode.jpg)
+
+Wilcard Mode page
+![Wilcard Mode page](assets/images/readme-images/wireframe-wildcard-mode.jpg)
 
 ### Colour schemes and typography
 
