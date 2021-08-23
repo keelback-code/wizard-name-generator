@@ -13,11 +13,10 @@ document.addEventListener("DOMContentLoaded", function() {
 
     document.getElementById("biscuit-input").addEventListener("keydown", function(event) {
     if (event.key === "Enter") {
-        rotateDice();
         biscuitRoll();
         asciiCeilingError();
         createNameArray();
-        //checkForBiscuitInput();
+        createDisplayHTML();
         resetNameHistory();
     }
 
@@ -36,7 +35,7 @@ function startRoll() {
         biscuitRoll();
         asciiCeilingError();
         createNameArray();
-        //checkForBiscuitInput();
+        createDisplayHTML();
         resetNameHistory();
     } else if (this.getAttribute("roll-type") === "wildcard") {
         rotateDice();
@@ -57,7 +56,6 @@ function startRoll() {
 function rotateDice() {
 
     document.getElementsByTagName("button")[0].addEventListener('click', function(){
-        console.log("click reached");
         rotationStart += 60;
     document.getElementsByTagName("button")[0].style.transform = 'rotate(' + rotationStart + 'deg)';
     })
@@ -144,11 +142,12 @@ function createNameArray() {
     const lastHistoryName = document.getElementsByClassName("name-display")[1].textContent;
     let names = firstHistoryName + " " + lastHistoryName;
     
-    if (firstHistoryName === "Please try another biscuit." || firstHistoryName === "" || lastHistoryName === "") {
+    if (firstHistoryName === "Please try another biscuit." || firstHistoryName === "undefined" || lastHistoryName === "undefined") {
         printHistory.push();
     } else {
         printHistory.push(names);
     } 
+    console.log(printHistory);
      
 } 
 
@@ -160,6 +159,10 @@ function createDisplayHTML() {
     const li = document.createElement("li");
     document.getElementsByClassName("name-history-storage")[0].appendChild(li); 
     li.textContent += printHistory[printHistory.length - 1]; 
+
+    if (li.textContent === "undefined") {
+        //something arggghhhhh
+    }
 
 }
 

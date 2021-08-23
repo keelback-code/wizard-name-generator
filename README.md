@@ -86,9 +86,7 @@ I have chosen this Space Mono for the font because it gives the site a retro fee
 Semantic HTML and aria labels were implemented across the site (only keep this section if you have more to say, otherwise this is covered in testing section)
 
 ### Features
-all pages, per page
-
-### Features across all pages
+### All pages
 Clear header, making the purpose clear to users of the site.
 
 Footer with links to social media, which will open in a new tab with aria labels announcing this. In keeping with the retro design of the site, the links will be for MySpace, Deviantart and LiveJournal (all still active).
