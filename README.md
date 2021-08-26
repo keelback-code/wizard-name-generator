@@ -145,7 +145,9 @@ GitPages - for the deployment of the site
 
 Gitpod - for editing the files
 
-Photo Editing - for editing the D20 dice image
+Pexel - for sourcing the D20 dice image
+
+Pixlr - for editing the D20 dice image
 
 ### Testing 
 
@@ -246,6 +248,7 @@ Github will automatically create a new repo, which is forked from the original. 
 * In the same 'Code' dropdown, you can opt to open the code with GitHub Desktop and work from there.
 
 ### Credits (content and media)
-names - crowdsourced - Una, mum, Donal, Glenn, Fin, Anthea, Johnny
+The wizard names were crowdsourced from friends and family, notably: Una Kate DuVivier McDermott, Anthea and Johnny Fields, Finola Connor, Joelle Horan, Donal McQuillan, Anne Ostini-Horan and Glenn Saunders. If you would like to add a (gender-neutral) name to the list feel free to send any suggestions to elyserhoran(at)gmail.com.
 Dice/D20 image - Pexel/Alexis Designs
-Code for sticky footer sourced from Css Tricks - https://css-tricks.com/couple-takes-sticky-footer/*/
+Code for sticky footer sourced from CSS Tricks - https://css-tricks.com/couple-takes-sticky-footer/*/
+Code for rotating the D20 dice adapted from Cloudinary - https://cloudinary.com/blog/rotating_images_in_javascript_three_quick_tutorials 
