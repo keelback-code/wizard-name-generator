@@ -9,10 +9,8 @@ document.addEventListener("DOMContentLoaded", function () {
 
     for (let die of dice) {
         die.addEventListener('click', function () {
-
             const rollType = this.getAttribute("roll-type");
             startRoll(rollType);
-
         });
 
         //Code to animate D20 adapted from https://cloudinary.com/blog/rotating_images_in_javascript_three_quick_tutorials .
@@ -34,7 +32,7 @@ document.addEventListener("DOMContentLoaded", function () {
 });
 
 /**
- * Function to determine which button has been pressed and start the 'roll' for that mode.
+ * Function to determine which button has been clicked and start the 'roll' for that mode.
  */
 function startRoll(rollType) {
 
@@ -57,7 +55,7 @@ function startRoll(rollType) {
 }
 
 /**
- * Function to begin biscuit mode; checks if user has entered input for Jaffa cakes, if not then runs calculateAsciiValue function.
+ * Function to begin biscuit mode; checks if user has entered input for Jaffa cakes, if not then checks for any input, then calls calculateAsciiValue function.
  */
 function biscuitRoll() {
 
@@ -74,13 +72,12 @@ function biscuitRoll() {
 }
 
 /**
- * Function to calculate the ASCII value of the user input, if the user has provided an input. 
+ * Function to calculate the ASCII value of the user input. 
  */
 function calculateAsciiValue() {
 
     let biscuitVar = document.getElementById("biscuit-input").value;
 
-    if (biscuitVar.length > 0) {
         let biscuitSum = 0;
 
         for (let i of biscuitVar) {
@@ -94,8 +91,7 @@ function calculateAsciiValue() {
 
         document.getElementById("first-name-result-biscuit").textContent = `${(wizardFirstNames[biscNum1])}`;
         document.getElementById("last-name-result-biscuit").textContent = `${(wizardLastNames[biscNum2])}`;
-    }
-
+    
 }
 
 /**
@@ -128,7 +124,7 @@ function wildcardRoll() {
 }
 
 /**
- * Function to display name history and store it in an array. Will not add error message from asciiCeilingError function to display or empty strings.
+ * Function to display name history and store it in an array. Will not add empty strings or error message from asciiCeilingError function to display.
  */
 function createNameArray() {
 
