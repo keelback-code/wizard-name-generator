@@ -5,33 +5,33 @@ let rotationStart = 0;
 
 document.addEventListener("DOMContentLoaded", function () {
 
-    
+
 
     const dice = document.getElementsByTagName("button");
 
     for (let die of dice) {
-        die.addEventListener('click', startRoll);
+        die.addEventListener('click', function () {
 
-        // Code to animate D20 adapted from https://cloudinary.com/blog/rotating_images_in_javascript_three_quick_tutorials .
+            const rollType = this.getAttribute("roll-type");
+            startRoll(rollType);
+
+        });
+
+        //Code to animate D20 adapted from https://cloudinary.com/blog/rotating_images_in_javascript_three_quick_tutorials .
         die.addEventListener('click', function () {
             rotationStart += 60;
             die.style.transform = 'rotate(' + rotationStart + 'deg)';
         });
-
     }
 
     document.getElementById("biscuit-input").addEventListener("keydown", function (event) {
         if (event.key === "Enter") {
-            biscuitRoll();
-            asciiCeilingError();
-            createNameArray();
-            //createDisplayHTML();
-            resetNameHistory();
+            startRoll("biscuit");
         }
 
     });
 
-    
+
 
 
 });
@@ -39,15 +39,15 @@ document.addEventListener("DOMContentLoaded", function () {
 /**
  * Function to determine which button has been pressed and start the 'roll' for that mode.
  */
-function startRoll() {
+function startRoll(rollType) {
 
-    if (this.getAttribute("roll-type") === "biscuit") {
+    if (rollType === "biscuit") {
         biscuitRoll();
         asciiCeilingError();
         createNameArray();
         //createDisplayHTML();
         resetNameHistory();
-    } else if (this.getAttribute("roll-type") === "wildcard") {
+    } else if (rollType === "wildcard") {
         wildcardRoll();
         createNameArray();
         //createDisplayHTML();
@@ -140,7 +140,6 @@ function createNameArray() {
     let names = firstHistoryName + " " + lastHistoryName;
 
     if (firstHistoryName === "Please try another biscuit." || firstHistoryName === "undefined" || lastHistoryName === "undefined") {
-        console.log("bisc reached");
         printHistory.push();
     } else {
         printHistory.push(names);
@@ -152,7 +151,7 @@ function createNameArray() {
     document.getElementsByClassName("name-history-storage")[0].appendChild(li);
     li.textContent += listHistory;
     console.log(listHistory);
-    
+
 }
 
 /**
@@ -170,7 +169,7 @@ function createDisplayHTML() {
     //while (li.textContent === "undefined") {
     //    continue;
     //} 
-    
+
 
 }
 
