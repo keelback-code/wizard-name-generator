@@ -129,20 +129,16 @@ function createNameHistory() {
     let firstHistoryName = document.getElementsByClassName("name-display")[0].textContent;
     let lastHistoryName = document.getElementsByClassName("name-display")[1].textContent;
     let names = firstHistoryName + " " + lastHistoryName;
+    const li = document.createElement("li");
+
+    document.getElementsByClassName("name-history-storage")[0].appendChild(li);
 
     if (firstHistoryName === "Please try another biscuit." || firstHistoryName === "undefined" || lastHistoryName === "undefined") {
         printHistory.push();
-    } else {
-        printHistory.push(names);
-    }
-    console.log(printHistory);
-
-    const li = document.createElement("li");
-    document.getElementsByClassName("name-history-storage")[0].appendChild(li);
-    if (firstHistoryName === "Please try another biscuit." || firstHistoryName === "undefined" || lastHistoryName === "undefined") {
         li.textContent = "";
     } else {
-        li.textContent += printHistory[printHistory.length - 1]
+        printHistory.push(names);
+        li.textContent += printHistory[printHistory.length - 1];
     }
 
 }
