@@ -39,13 +39,11 @@ function startRoll(rollType) {
     if (rollType === "biscuit") {
         biscuitRoll();
         asciiCeilingError();
-        createNameArray();
-        //createDisplayHTML();
+        createNameHistory();
         resetNameHistory();
     } else if (rollType === "wildcard") {
         wildcardRoll();
-        createNameArray();
-        //createDisplayHTML();
+        createNameHistory();
         resetNameHistory();
     } else {
         alert(`Unknown roll.`);
@@ -124,9 +122,9 @@ function wildcardRoll() {
 }
 
 /**
- * Function to display name history and store it in an array. Will not add empty strings or error message from asciiCeilingError function to display.
+ * Function to display name history by storing it in an array which is displayed in the HTML as a list. Will not add empty strings or error message from asciiCeilingError function to display.
  */
-function createNameArray() {
+function createNameHistory() {
 
     let firstHistoryName = document.getElementsByClassName("name-display")[0].textContent;
     let lastHistoryName = document.getElementsByClassName("name-display")[1].textContent;
@@ -139,30 +137,13 @@ function createNameArray() {
     }
     console.log(printHistory);
 
-    let listHistory = printHistory[printHistory.length - 1];
     const li = document.createElement("li");
     document.getElementsByClassName("name-history-storage")[0].appendChild(li);
-    li.textContent += listHistory;
-    console.log(listHistory);
-
-}
-
-/**
- * Function to create list items and add them to the HTML, and display the name history in the list.
- */
-function createDisplayHTML() {
-
-    let listHistory = printHistory[printHistory.length - 1];
-    const li = document.createElement("li");
-    document.getElementsByClassName("name-history-storage")[0].appendChild(li);
-    //li.textContent += printHistory[printHistory.length - 1];
-    li.textContent += listHistory;
-    console.log(listHistory);
-
-    //while (li.textContent === "undefined") {
-    //    continue;
-    //} 
-
+    if (firstHistoryName === "Please try another biscuit." || firstHistoryName === "undefined" || lastHistoryName === "undefined") {
+        li.textContent = "";
+    } else {
+        li.textContent += printHistory[printHistory.length - 1]
+    }
 
 }
 
