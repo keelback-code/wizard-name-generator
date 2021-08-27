@@ -158,6 +158,14 @@ button img {
 
 /*Media queries*/
 
+/*Queries for screen sizes larger than 1600px*/
+
+@media screen and (min-width: 1600px) {
+    .landing-header, .landing-links {
+        font-size: 1.75em;
+    }
+}
+
 /*Queries for screen sizes smaller than 980px*/
 
 @media screen and (max-width: 980px) {
@@ -166,6 +174,10 @@ button img {
         flex-flow: column wrap;
         justify-content:flex-start;
         margin: 0 auto;    
+    }
+
+    .site-header {
+        font-size: 1em;
     }
 }
 

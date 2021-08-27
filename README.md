@@ -7,7 +7,6 @@
 [Design and UX](#design-and-ux) 
 * [Wireframes](#wireframes)
 * [Colour schemes and typography](#colour-schemes-and-typography)
-* [Accessibility](#accessibility)
 
 [Features](#features)
 
@@ -62,9 +61,9 @@ As the owner of the site:
 
 ### Design and UX
 
-The visual design for this site is simplistic so as not to draw away from the game: focus on the javascript/game for this site/project. I also aimed for a retro feel to the site, reminiscent of the random name generators my friends and I played with in our free time in the computer lab at primary school, in the late 90s.
+I aimed for a retro feel to the site, reminiscent of the random name generators my friends and I played with in our free time in the computer lab at primary school, in the late 90s. The visual design is simplistic so as not to draw away from the game. 
 
-When researching wizard names I was instantly bombarded by sites advertising wizards names ‘for girls’ and ‘for boys’. I would like to create a gender-neutral site where the gender doesn’t matter; because this is a name for a wizard, which is generally speaking both magical and fictional so there’s no need to gender it. There is enough gendering in this world, which is constantly excluding members of the LGBTQ+ community, without extending that to wizards. Fantasy and fiction can be forms of escapism, and if you use that escapism to help escape a gendered world, I don’t want to be a reminder of that world.
+When researching wizard names I was instantly bombarded by sites advertising wizards names ‘for girls’ and ‘for boys’. I would like to create a gender-neutral site where the gender doesn’t matter; because this is a name for a wizard, which is generally speaking both magical and fictional. There is enough gendering in this world, which is constantly excluding members of the LGBTQ+ community, without extending that to wizards. Fantasy and fiction can be forms of escapism, and if you use that escapism to help escape a gendered world, I don’t want this site to be a reminder of that world.
 
 ### Wireframes
 
@@ -79,11 +78,7 @@ Wilcard Mode page
 
 ### Colour schemes and typography
 
-I have chosen this Space Mono for the font because it gives the site a retro feel, without being over-the-top. I am sticking with a white background and black text for this website, so as to focus on the game. It contributes to the retro feel but is also clear and concise for ease-of-use.
-
-### Accessibility
-
-Semantic HTML and aria labels were implemented across the site (only keep this section if you have more to say, otherwise this is covered in testing section)
+I have chosen Space Mono for the font because it gives the site a retro feel, without being over-the-top. I am sticking with a white background and black text for this website, so as to focus on the game. It contributes to the retro feel but is also clear and concise for ease-of-use.
 
 ### Features
 ### All pages
@@ -97,29 +92,27 @@ Links to each mode.
 
 ### Biscuit Mode and Wildcard Mode pages
 
-Submit button, triggered by mouse or enter key - picture/icon of a D20 dice to keep in line with the wizard theme
+Submit button, triggered by mouse or enter key - picture/icon of a D20 dice to keep in line with the wizard theme.
 
-Area for new name to be printed to the page
+Area for new name to be printed to the page.
 
 Area for name history to be displayed - maximum of five names to avoid visual or data overload.
 
-Once five names have been pushed to the history, an alert will pop up to let the user know that the history is going to be emptied (refresh or just 0?). The names will also be listed on the alert so that the user can record them if need be.
+Once 6 names have been pushed to the history, an alert will pop up to let the user know that the history is going to be emptied. The names will be listed on the alert so that the user can record them if need be.
 
-Navigation links listing Home, Wildcard Mode and Biscuit Mode, allowing for easy and intuitive navigation of site for all users. On desktop links will be underlined when they are hovered over to indicate to the user that they are clickable. The active page will also be indicated in the navigation bar.
-
-On mobile and most tablets the navigation bar will change to a hamburger design and will remain on the same side of the screen for continuity and ease of use.
+Navigation links listing Wildcard Mode and Biscuit Mode, allowing for easy and intuitive navigation of site for all users. On desktop links will be underlined when they are hovered over to indicate to the user that they are clickable. The active page will also be indicated in the navigation bar.
 
 ### Biscuit Mode page
 Text box asking user for input; asks for favourite biscuit, program sums the ASCII values of the characters and uses this number to generate a name.
 
-If the ASCII value is too great for the equation an error alert will be generated asking the user to input a shorter word
+If the ASCII value is too great for the equation an error alert will be generated asking the user to input a shorter word.
 
-Link to the ASCII Wikipedia page for users who are interested in the process
+Link to the ASCII Wikipedia page for users who are interested in the process; text is underlined to indicate that it is an external link.
 
 ### Future Implementations
 
 In the future I would like to use an external library, such as Sweet Alert, to style the Javascript alerts to match the design of the site.
-I would also like to use Javascript to animate the dice, either toggling images or using sprites.
+I would also like to integrate an option for the user to email the name selection to themselves, or to share it on social media.
 
 ### Technologies
 
@@ -248,7 +241,12 @@ Github will automatically create a new repo, which is forked from the original. 
 * In the same 'Code' dropdown, you can opt to open the code with GitHub Desktop and work from there.
 
 ### Credits (content and media)
-The wizard names were crowdsourced from friends and family, notably: Una Kate DuVivier McDermott, Anthea and Johnny Fields, Finola Connor, Joelle Horan, Donal McQuillan, Anne Ostini-Horan and Glenn Saunders. If you would like to add a (gender-neutral) name to the list feel free to send any suggestions to elyserhoran(at)gmail.com.
+The wizard names were crowdsourced from friends and family, notably: Una Kate DuVivier McDermott, Anthea and Johnny Fields, Finola Connor, Joelle Horan, Donal McQuillan, Anne Ostini-Horan and Glenn Saunders. If you would like to add a (gender-neutral) name to the list feel free to send any suggestions to elyserhoran@gmail.com.
+
 Dice/D20 image - Pexel/Alexis Designs
+
 Code for sticky footer sourced from CSS Tricks - https://css-tricks.com/couple-takes-sticky-footer/*/
+
 Code for rotating the D20 dice adapted from Cloudinary - https://cloudinary.com/blog/rotating_images_in_javascript_three_quick_tutorials 
+
+### Appendix
