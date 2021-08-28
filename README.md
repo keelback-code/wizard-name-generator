@@ -81,33 +81,62 @@ Wilcard Mode page
 I have chosen Space Mono for the font because it gives the site a retro feel, without being over-the-top. I am sticking with a white background and black text for this website, so as to focus on the game. It contributes to the retro feel but is also clear and concise for ease-of-use.
 
 ### Features
-### All pages
-Clear header, making the purpose clear to users of the site.
 
-Footer with links to social media, which will open in a new tab with aria labels announcing this. In keeping with the retro design of the site, the links will be for MySpace, Deviantart and LiveJournal (all still active).
+### All pages
+
+* Clear header, making the purpose clear to users of the site.
+
+![Header](assets/images/readme-images/header.jpg)
+
+* Footer with links to social media, which will open in a new tab with aria labels announcing this. In keeping with the retro design of the site, the links will be for MySpace, Deviantart and LiveJournal (all still active).
+
+![Footer](assets/images/readme-images/footer.jpg)
 
 ### Landing page
 
-Links to each mode.
+* Links to each mode.
+
+![Landing page links](assets/images/readme-images/landing-links.jpg)
 
 ### Biscuit Mode and Wildcard Mode pages
 
-Submit button - picture/icon of a D20 dice to keep in line with the wizard theme. 
+* Submit button - picture/icon of a D20 dice to keep in line with the wizard theme. Accompanying label text for anyone not familiar with a D20 and an aria label for accessibility. Dice will rotate with each click to simulate rolling.
 
-Area for new name to be printed to the page.
+![D20 button](assets/images/readme-images/d20.jpg)
 
-Area for name history to be displayed - maximum of 6 names to avoid visual or data overload. Down arrow next to the text to indicate placement; especially important for smaller viewports where the space is not immediately visible, or may be hidden when a long name is generated.
+* Area for new name to be printed to the page.
 
-Once 6 names have been pushed to the history, an alert will pop up to let the user know that the history is going to be emptied. The names will be listed on the alert so that the user can record them if need be.
+![Name display](assets/images/readme-images/name-display.jpg)
 
-Navigation links listing Wildcard Mode and Biscuit Mode, allowing for easy and intuitive navigation of site for all users. On desktop links will be underlined when they are hovered over to indicate to the user that they are clickable. The active page will also be indicated in the navigation bar.
+* Area for name history to be displayed - maximum of 6 names to avoid visual or data overload. Down arrow next to the text to indicate placement; especially important for smaller viewports where the space is not immediately visible, or may be hidden when a long name is generated.
+
+![Name history](assets/images/readme-images/name-history.jpg)
+
+* Once 6 names have been pushed to the history, an alert will pop up to let the user know that the history is going to be emptied. The names will be listed on the alert so that the user can record them if need be.
+
+![History alert](assets/images/readme-images/history-alert.jpg)
+
+* Navigation links listing Wildcard Mode and Biscuit Mode, allowing for easy and intuitive navigation of site for all users. On desktop links will be underlined when they are hovered over to indicate to the user that they are clickable. The active page will also be indicated in the navigation bar.
+
+![Nav bar](assets/images/readme-images/nav-bar.jpg)
 
 ### Biscuit Mode page
-Text box asking user for input; asks for favourite biscuit, program sums the ASCII values of the characters and uses this number to generate a name. Can be triggered by the enter key or by clicking on the D20 button, as it is intuitive to users to use the enter key when they have provided a text input, regardless of the on-screen instructions.
 
-If the ASCII value is too great for the equation an error alert will be generated asking the user to input a shorter word.
+* Text box asking user for input; asks for favourite biscuit, program sums the ASCII values of the characters and uses this number to generate a name. Can be triggered by the enter key or by clicking on the D20 button, as it is intuitive to users to use the enter key when they have provided a text input, regardless of the on-screen instructions.
 
-Link to the ASCII Wikipedia page for users who are interested in the process; text is underlined to indicate that it is an external link.
+![Text box for biscuit input](assets/images/readme-images/biscuit-input.jpg)
+
+* Error message if no input is provided by the user.
+
+![Biscuit no input error alert](assets/images/readme-images/input-error.jpg)
+
+* If the ASCII value is too great for the equation an error alert will be generated asking the user to input a shorter word.
+
+![Ascii ceiling error alert](assets/images/readme-images/ascii-error.jpg)
+
+* Link to the ASCII Wikipedia page for users who are interested in the process; text is underlined to indicate that it is an external link.
+
+![Ascii Wikipedia link](assets/images/readme-images/ascii-link.jpg)
 
 ### Future Implementations
 
