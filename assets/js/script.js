@@ -71,7 +71,7 @@ function biscuitRoll() {
 }
 
 /**
- * Function to calculate the ASCII value of the user input. 
+ * Function to calculate the ASCII value of the user input and use that to generate a random wizard name using one from each array.
  */
 function calculateAsciiValue() {
 
@@ -112,7 +112,7 @@ function asciiCeilingError() {
 }
 
 /**
- * Function to calculate two random numbers and use that to generate a random wizard name; one from each array.
+ * Function to calculate two random numbers and use that to generate a random wizard name using one from each array.
  */
 function wildcardRoll() {
 

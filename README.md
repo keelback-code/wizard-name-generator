@@ -92,18 +92,18 @@ Links to each mode.
 
 ### Biscuit Mode and Wildcard Mode pages
 
-Submit button, triggered by mouse or enter key - picture/icon of a D20 dice to keep in line with the wizard theme.
+Submit button - picture/icon of a D20 dice to keep in line with the wizard theme. 
 
 Area for new name to be printed to the page.
 
-Area for name history to be displayed - maximum of five names to avoid visual or data overload.
+Area for name history to be displayed - maximum of 6 names to avoid visual or data overload. Down arrow next to the text to indicate placement; especially important for smaller viewports where the space is not immediately visible, or may be hidden when a long name is generated.
 
 Once 6 names have been pushed to the history, an alert will pop up to let the user know that the history is going to be emptied. The names will be listed on the alert so that the user can record them if need be.
 
 Navigation links listing Wildcard Mode and Biscuit Mode, allowing for easy and intuitive navigation of site for all users. On desktop links will be underlined when they are hovered over to indicate to the user that they are clickable. The active page will also be indicated in the navigation bar.
 
 ### Biscuit Mode page
-Text box asking user for input; asks for favourite biscuit, program sums the ASCII values of the characters and uses this number to generate a name.
+Text box asking user for input; asks for favourite biscuit, program sums the ASCII values of the characters and uses this number to generate a name. Can be triggered by the enter key or by clicking on the D20 button, as it is intuitive to users to use the enter key when they have provided a text input, regardless of the on-screen instructions.
 
 If the ASCII value is too great for the equation an error alert will be generated asking the user to input a shorter word.
 
@@ -111,7 +111,7 @@ Link to the ASCII Wikipedia page for users who are interested in the process; te
 
 ### Future Implementations
 
-In the future I would like to use an external library, such as Sweet Alert, to style the Javascript alerts to match the design of the site.
+In the future I would like to use an external library, such as Sweet Alert, to style the Javascript alerts to match the design of the site. Sweet Alert also looks to be, to the extent of my knowledge, a more accessible option for alerts, which is an added and important benefit.
 I would also like to integrate an option for the user to email the name selection to themselves, or to share it on social media.
 
 ### Technologies
@@ -136,17 +136,63 @@ GitHub - for hosting the site
 
 GitPages - for the deployment of the site
 
-Gitpod - for editing the files
+Gitpod - for editing the files 
 
 Pexel - for sourcing the D20 dice image
 
 Pixlr - for editing the D20 dice image
 
+Font Awesome - for the icons
+
 ### Testing 
 
-tbc
+### Code Validation
+
+[Javascript validator](https://jshint.com/) - 
+
+![JS code validator image preview]()
+
+[HTML validator](https://validator.w3.org/) - 
+
+![HTML code validator image preview]()
+
+[CSS validator](https://jigsaw.w3.org/css-validator/) - 
+
+![Valid CSS logo]()
+
+[Accessibility validator](https://accessibilitytest.org/) - rating 
+
+![Accessibility validator snip]()
+
+### Browser Compatibility
+
+Browser Compatibility checks were run using [Browserling](https://www.browserling.com/) and my own computer. The results are:
+
+Firefox - &#9745;
+
+Chrome - &#9745;
+
+Opera - &#9745;
+
+Safari - &#9745; 
+
+Microsoft Edge - &#9745;
+
+### Performance Testing
+
+Performance testing was conducted using [Lighthouse](https://developers.google.com/web/tools/lighthouse#devtools). The results are:
+![Lighthouse results]()
+
+### Manual Testing
+
+I sent the live link to friends and family members for testing and feedback. Design and usability suggestions were considered and acted on. One tester said the design reminded him of the DOS environment, which is the theme I was aiming for.
+
+I conducted manual testing and recorded the results as follows:
+
+![Manual testing spreadsheet]()
 
 ### User Stories Testing
+
 A first time user looking to play the game:
 
 *I want to easily understand the content and layout of the site*
