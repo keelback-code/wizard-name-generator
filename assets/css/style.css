@@ -132,6 +132,10 @@ button img {
     margin-right: 40px;
 }
 
+.fa-angle-double-down {
+    font-size: 0.75em;
+}
+
 /* Styling for Biscuit Mode page only*/
 
 .roll h3, .name-printout h4 {
