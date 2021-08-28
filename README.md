@@ -212,6 +212,10 @@ As the owner of the site:
 ### Debugging and known bugs
 tbc
 
+Known bugs
+
+The code is set up so that when the name history reaches 6 entries, it will wait 4 seconds and then an alert will pop up, letting the reader know that the history will be erased. I added in this buffer because otherwise, in some browsers,
+
 ### Deployment
 
 Publishing
