@@ -41,11 +41,11 @@ function startRoll(rollType) {
         biscuitRoll();
         asciiCeilingError();
         createNameHistory();
-        resetNameHistory();
+        setTimeout(resetNameHistory, 3000);
     } else if (rollType === "wildcard") {
         wildcardRoll();
         createNameHistory();
-        resetNameHistory();
+        setTimeout(resetNameHistory, 3000);
     } else {
         alert(`Unknown roll.`);
         throw `Unknown roll.`;
@@ -58,7 +58,7 @@ function startRoll(rollType) {
  */
 function biscuitRoll() {
 
-    let biscuitInput = document.getElementById("biscuit-input").value;
+    const biscuitInput = document.getElementById("biscuit-input").value;
 
     if (biscuitInput === "Jaffa Cakes" || biscuitInput === "jaffa cakes" || biscuitInput === "jaffacakes" || biscuitInput === "Jaffa cakes") {
         alert("Is that really a biscuit? I find no name here in that file. Please roll again.");
@@ -75,16 +75,16 @@ function biscuitRoll() {
  */
 function calculateAsciiValue() {
 
-    let biscuitVar = document.getElementById("biscuit-input").value;
+    const biscuitVar = document.getElementById("biscuit-input").value;
 
         for (let i of biscuitVar) {
             let x = biscuitVar.charCodeAt(i);
             biscuitSum += x;
         }
 
-        let biscuitDivide = biscuitSum / 2;
-        let biscNum1 = Math.floor(biscuitDivide / 42);
-        let biscNum2 = Math.floor(biscuitDivide / 21);
+        const biscuitDivide = biscuitSum / 2;
+        const biscNum1 = Math.floor(biscuitDivide / 42);
+        const biscNum2 = Math.floor(biscuitDivide / 21);
 
         document.getElementById("first-name-result-biscuit").textContent = `${(wizardFirstNames[biscNum1])}`;
         document.getElementById("last-name-result-biscuit").textContent = `${(wizardLastNames[biscNum2])}`;
@@ -96,8 +96,8 @@ function calculateAsciiValue() {
  */
 function asciiCeilingError() {
 
-    let firstName = document.getElementById("first-name-result-biscuit").textContent;
-    let lastName = document.getElementById("last-name-result-biscuit").textContent;
+    const firstName = document.getElementById("first-name-result-biscuit").textContent;
+    const lastName = document.getElementById("last-name-result-biscuit").textContent;
 
     if (firstName === "undefined" || lastName === "undefined") {
         alert("Your word is too valuable! The gremlins have taken it; please enter a shorter word.");
@@ -112,8 +112,8 @@ function asciiCeilingError() {
  */
 function wildcardRoll() {
 
-    let wildNum1 = Math.floor(Math.random() * wizardFirstNames.length);
-    let wildNum2 = Math.floor(Math.random() * wizardLastNames.length);
+    const wildNum1 = Math.floor(Math.random() * wizardFirstNames.length);
+    const wildNum2 = Math.floor(Math.random() * wizardLastNames.length);
 
     document.getElementById("first-name-result-wildcard").textContent = `${(wizardFirstNames[wildNum1])}`;
     document.getElementById("last-name-result-wildcard").textContent = `${(wizardLastNames[wildNum2])}`;
@@ -125,9 +125,9 @@ function wildcardRoll() {
  */
 function createNameHistory() {
 
-    let firstHistoryName = document.getElementsByClassName("name-display")[0].textContent;
-    let lastHistoryName = document.getElementsByClassName("name-display")[1].textContent;
-    let names = firstHistoryName + " " + lastHistoryName;
+    const firstHistoryName = document.getElementsByClassName("name-display")[0].textContent;
+    const lastHistoryName = document.getElementsByClassName("name-display")[1].textContent;
+    const names = firstHistoryName + " " + lastHistoryName;
     const li = document.createElement("li");
 
     document.getElementsByClassName("name-history-storage")[0].appendChild(li);
