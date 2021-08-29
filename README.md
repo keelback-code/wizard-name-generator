@@ -71,7 +71,7 @@ As the owner of the site:
 
 I aimed for a retro feel to the site, reminiscent of the random name generators my friends and I played with in our free time in the computer lab at primary school, in the late 90s. The visual design is simplistic so as not to draw away from the game. 
 
-When researching wizard names I was instantly bombarded by sites advertising wizards names ‘for girls’ and ‘for boys’. I would like to create a gender-neutral site where the gender doesn’t matter; because this is a name for a wizard, which is generally speaking both magical and fictional. There is enough gendering in this world, which is constantly excluding members of the LGBTQ+ community, without extending that to wizards. Fantasy and fiction can be forms of escapism and if you use that to help escape a gendered world, I don’t want this site to be a reminder of that world.
+When researching wizard names I was instantly bombarded by sites advertising wizards names ‘for girls’ and ‘for boys’. I would like to create a gender-neutral site where the gender doesn’t matter; because this is a name for a wizard, which is generally speaking both magical and fictional. There is enough gendering in this world, which is constantly excluding members of the LGBTQ+ community, without extending that to wizards. 
 
 ### Wireframes
 
@@ -81,7 +81,7 @@ Landing page
 Biscuit Mode page
 ![Biscuit Mode page](assets/images/readme-images/wireframe-biscuit-mode.jpg)
 
-Wilcard Mode page
+Wildcard Mode page
 ![Wilcard Mode page](assets/images/readme-images/wireframe-wildcard-mode.jpg)
 
 The main difference between the wireframes and the site is the removal of the 'Home' link from the navigation bar; as it only led to the landing page, which only has links for the two modes, it seemed unnecessary. The header still provides a link back to home if the user needs to go back to the landing page, but the navigation bar will still allow them to intuitively navigate the site.
@@ -187,17 +187,11 @@ Font Awesome - for the icons
 
 ### Code Validation
 
-[Javascript validator](https://jshint.com/) - 
+[Javascript validator](https://jshint.com/) - passes with no errors and 2 warnings
 
-![JS code validator image preview]()
+[HTML validator](https://validator.w3.org/) - passes with no errors or warnings
 
-[HTML validator](https://validator.w3.org/) - 
-
-![HTML code validator image preview]()
-
-[CSS validator](https://jigsaw.w3.org/css-validator/) - 
-
-![Valid CSS logo]()
+[CSS validator](https://jigsaw.w3.org/css-validator/) - passes with no errors or warnings
 
 [Accessibility validator](https://accessibilitytest.org/) - rating 
 
@@ -343,7 +337,7 @@ Github will automatically create a new repo, which is forked from the original. 
 * In the same 'Code' dropdown, you can opt to open the code with GitHub Desktop and work from there.
 
 ### Credits
-The wizard names were crowdsourced from friends and family, notably: Una Kate DuVivier McDermott, Anthea and Johnny Fields, Finola Connor, Joelle Horan, Donal McQuillan, Anne Ostini-Horan and Glenn Saunders. If you would like to add a (gender-neutral) name to the list feel free to send any suggestions to elyserhoran@gmail.com.
+The wizard names were crowdsourced from friends and family, notably: Una Kate DuVivier McDermott, Anthea and Johnny Fields, Finola Connor-Horan, Joelle Horan, Donal McQuillan, Anne Ostini-Horan and Glenn Saunders. If you would like to add a (gender-neutral) name to the list feel free to send any suggestions to elyserhoran@gmail.com.
 
 Dice/D20 image - Pexel/Alexis Designs
 

@@ -9,7 +9,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
     for (let die of dice) {
         die.addEventListener('click', function () {
-            const rollType = this.getAttribute("roll-type");
+            const rollType = this.getAttribute("data-roll-type");
             startRoll(rollType);
         });
 
