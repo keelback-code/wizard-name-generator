@@ -31,13 +31,15 @@
 
 The purpose of the Wizard Name Generator is to provide a way for users to find a random name for a wizard, be this for a character for a book, a game, or just for laughs.
 
-There will be two modes: Wildcard and Biscuit. Wildcard mode will allow the user to generate an entirely random name with each roll of the dice. Biscuit mode will prompt the user for input and use the ASCII value of the input to generate a name (more on this in the Features section).
+There are two modes: Wildcard and Biscuit. Wildcard mode allows the user to generate an entirely random name with each roll of the dice. Biscuit mode prompts the user for input and uses the ASCII value of the input to generate a name (more on this in the Features section).
 
-The site and names are deliberately gender-neutral, because wizards have no need of gender. I want everyone to feel included when they visit this page, and introducing arbitrary binaries, such as gender, can unnecessarily exclude visitors and make them feel unwelcome.
+The site and names are deliberately gender-neutral, because wizards have no need of gender. I want everyone to feel included when they visit this page, and introducing arbitrary binaries such as gender, can unnecessarily exclude visitors and make them feel unwelcome.
 
 The live link is:
 
 [Wizard Name Generator](https://elyserh.github.io/wizard-name-generator/index.html)
+
+Screenshot of Biscuit Mode page
 
 ![Screenshot](assets/images/readme-images/wng-main.jpg)
 
@@ -50,7 +52,7 @@ A first time user looking to play the game:
 * I want multiple options for name generation
 * I want the previous names to be displayed on the screen so that I can ‘roll’ again
 * I want to be warned if the names are going to be removed from the screen
-I want to be able to contact the owner on social media
+* I want to be able to contact the owner on social media
 
 A returning user looking to play the game again:
 * I want multiple options for name generation
@@ -69,7 +71,7 @@ As the owner of the site:
 
 I aimed for a retro feel to the site, reminiscent of the random name generators my friends and I played with in our free time in the computer lab at primary school, in the late 90s. The visual design is simplistic so as not to draw away from the game. 
 
-When researching wizard names I was instantly bombarded by sites advertising wizards names ‘for girls’ and ‘for boys’. I would like to create a gender-neutral site where the gender doesn’t matter; because this is a name for a wizard, which is generally speaking both magical and fictional. There is enough gendering in this world, which is constantly excluding members of the LGBTQ+ community, without extending that to wizards. Fantasy and fiction can be forms of escapism, and if you use that escapism to help escape a gendered world, I don’t want this site to be a reminder of that world.
+When researching wizard names I was instantly bombarded by sites advertising wizards names ‘for girls’ and ‘for boys’. I would like to create a gender-neutral site where the gender doesn’t matter; because this is a name for a wizard, which is generally speaking both magical and fictional. There is enough gendering in this world, which is constantly excluding members of the LGBTQ+ community, without extending that to wizards. Fantasy and fiction can be forms of escapism and if you use that to help escape a gendered world, I don’t want this site to be a reminder of that world.
 
 ### Wireframes
 
@@ -82,11 +84,11 @@ Biscuit Mode page
 Wilcard Mode page
 ![Wilcard Mode page](assets/images/readme-images/wireframe-wildcard-mode.jpg)
 
-The main difference between the wireframes and the site is the removal of the 'Home' link from the navigation bar; as it only led to the landing page, which has only links for the two modes, it seemed unnecessary. The header still provides a link back to home if the user needs to go back to the landing page, but the navigation bar will still allow them to intuitively navigate the site.
+The main difference between the wireframes and the site is the removal of the 'Home' link from the navigation bar; as it only led to the landing page, which only has links for the two modes, it seemed unnecessary. The header still provides a link back to home if the user needs to go back to the landing page, but the navigation bar will still allow them to intuitively navigate the site.
 
 ### Colour schemes and typography
 
-I have chosen Space Mono for the font because it gives the site a retro feel, without being over-the-top. I am sticking with a white background and black text for this website, so as to focus on the game. It contributes to the retro feel but is also clear and concise for ease-of-use.
+I have chosen Space Mono for the font because it gives the site a retro feel, without being over-the-top. I am sticking with a white background and black text for this website, so as to focus on the game. It contributes to the retro feel but is also clear and concise for ease-of-use and accessibility.
 
 ### Features
 
@@ -102,7 +104,7 @@ I have chosen Space Mono for the font because it gives the site a retro feel, wi
 
 ### Landing page
 
-* Links to each mode.
+* Links to each mode; will be underlined when hovered over.
 
 ![Landing page links](assets/images/readme-images/landing-links.jpg)
 
@@ -222,7 +224,7 @@ Performance testing was conducted using [Lighthouse](https://developers.google.c
 
 ### Manual Testing
 
-I sent the live link to friends and family members for testing and feedback. The site was received positively; design and usability suggestions were considered and acted on. One tester said the design reminded him of the DOS environment, which is the theme I was aiming for. The site was also put up in the Code Institute Slack community for feedback.
+I sent the live link to friends and family members for testing and feedback. The site was received positively; design and usability suggestions were considered and acted on. One tester said the design reminded him of the DOS environment, which is the retro feel I was aiming for. The site was also put up in the Code Institute Slack community for feedback.
 
 I conducted manual testing and recorded the results as follows:
 
@@ -235,22 +237,24 @@ I conducted manual testing and recorded the results as follows:
 A first time user looking to play the game:
 
 *I want to easily understand the content and layout of the site*
-* Simple and clear flow to site, simple instructions on how to play the game
+
+* Simple and clear flow to site, simple instructions on how to play the game.
 
 *I want to intuitively navigate the site to browse content*
-* Simple landing page with links to both modes, nav bar on Biscuit and Wildcard pages
+
+* Simple landing page with links to both modes, nav bar on Biscuit and Wildcard pages.
 
 *I want to be able to access and use the website as intended on any device*
 
-* Responsive design, including simple layout for content
+* Responsive design, including simple layout for content.
 
 *I want multiple options for name generation*
 
-* Biscuit (ASCII) mode and Wildcard mode
+* Biscuit (ASCII) mode and Wildcard mode.
 
 *I want the previous names to be displayed on the screen so that I can ‘roll’ again*
 
-* History section which will display name history 
+* History section which will display name history.
 
 *I want to be warned if the names are going to be removed from the screen*
 
@@ -258,13 +262,13 @@ A first time user looking to play the game:
 
 *I want to be able to contact the owner on social media*
 
-* Links to social media in footer
+* Links to social media in footer.
 
 A returning user looking to play the game again:
 
 *I want multiple options for name generation*
 
-* Biscuit (ASCII) mode and Wildcard mode
+* Biscuit (ASCII) mode and Wildcard mode.
 
 *I want a large range of names so that I will not quickly run out of names*
 
@@ -280,7 +284,7 @@ As the owner of the site:
 
 *I want users to be able to use the site easily and intuitively*
 
-* Simple and clear flow to site, simple instructions on how to play the game, clear navigational links throughout site
+* Simple and clear flow to site, simple instructions on how to play the game, clear navigational links throughout site.
 
 *I want users to be able to easily generate and find names*
 
@@ -288,7 +292,7 @@ As the owner of the site:
 
 *I want to create a gender neutral site*
 
-* All names are gender neutral or gender-ambiguous, and there is no option to choose a gender before generating a name
+* All names are gender neutral or gender-ambiguous, and there is no option to choose a gender before generating a name.
 
 *I want to provide the same experience for all users*
 
@@ -300,9 +304,9 @@ As the owner of the site:
 
 This is the first site I have built with Javascript so there was a fair bit of debugging that ultimately had simple solutions (such as moving an object from local to global scope).
 
-Outside of this, primarily debugging happened in relation to the createNameHistory function. The goals were to get it to display vertically and not to display errors. Originally I just put the array in a new paragraph, but because this is a single object, I could not style it vertically using CSS. The best way seemed to be to put each name as a list item, which involves more code but looks much nicer to the user and is more pliable when it comes to CSS.
+Outside of this, primarily debugging happened in relation to the createNameHistory function. The goals were to get it to display vertically and not to display errors. Originally I just put the array in a new paragraph, but because the array is a single object, I could not style it vertically using CSS. The best way seemed to be to put each name as a list item, which involves more code but looks much nicer to the user and is more pliable when it comes to CSS.
 
-I also did some refactoring for the startRoll function; it originally used the 'this' keyword in the function, which resulted in the enter key event listener having to call each of it's own functions individually, rather than just calling startRoll. I moved the use of 'this' up to the event listener and used that to give startRoll it's own parameter.
+I also did some refactoring for the startRoll function; it originally used the 'this' keyword in the function, which resulted in the enter key event listener having to call each of its own functions individually, rather than just calling startRoll. I moved the use of 'this' up to the event listener and used that to give startRoll it's own parameter.
 
 ### Known bugs
 
@@ -338,7 +342,7 @@ Github will automatically create a new repo, which is forked from the original. 
 
 * In the same 'Code' dropdown, you can opt to open the code with GitHub Desktop and work from there.
 
-### Credits (content and media)
+### Credits
 The wizard names were crowdsourced from friends and family, notably: Una Kate DuVivier McDermott, Anthea and Johnny Fields, Finola Connor, Joelle Horan, Donal McQuillan, Anne Ostini-Horan and Glenn Saunders. If you would like to add a (gender-neutral) name to the list feel free to send any suggestions to elyserhoran@gmail.com.
 
 Dice/D20 image - Pexel/Alexis Designs
