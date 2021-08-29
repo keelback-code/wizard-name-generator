@@ -35,6 +35,12 @@ There will be two modes: Wildcard and Biscuit. Wildcard mode will allow the user
 
 The site and names are deliberately gender-neutral, because wizards have no need of gender. I want everyone to feel included when they visit this page, and introducing arbitrary binaries, such as gender, can unnecessarily exclude visitors and make them feel unwelcome.
 
+The live link is:
+
+[Wizard Name Generator](https://elyserh.github.io/wizard-name-generator/index.html)
+
+![Screenshot](assets/images/readme-images/wng-main.jpg)
+
 ### User Stories
 
 A first time user looking to play the game:
@@ -75,6 +81,8 @@ Biscuit Mode page
 
 Wilcard Mode page
 ![Wilcard Mode page](assets/images/readme-images/wireframe-wildcard-mode.jpg)
+
+The main difference between the wireframes and the site is the removal of the 'Home' link from the navigation bar; as it only led to the landing page, which has only links for the two modes, it seemed unnecessary. The header still provides a link back to home if the user needs to go back to the landing page, but the navigation bar will still allow them to intuitively navigate the site.
 
 ### Colour schemes and typography
 
@@ -214,7 +222,7 @@ Performance testing was conducted using [Lighthouse](https://developers.google.c
 
 ### Manual Testing
 
-I sent the live link to friends and family members for testing and feedback. Design and usability suggestions were considered and acted on. One tester said the design reminded him of the DOS environment, which is the theme I was aiming for.
+I sent the live link to friends and family members for testing and feedback. The site was received positively; design and usability suggestions were considered and acted on. One tester said the design reminded him of the DOS environment, which is the theme I was aiming for. The site was also put up in the Code Institute Slack community for feedback.
 
 I conducted manual testing and recorded the results as follows:
 
