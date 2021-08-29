@@ -132,7 +132,7 @@ button img {
 .name-history ul {
     list-style-type: none;
     display: flex;
-    flex-direction: column;
+    flex-direction: column-reverse;
     margin-right: 40px;
 }
 

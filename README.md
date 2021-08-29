@@ -138,7 +138,7 @@ I have chosen Space Mono for the font because it gives the site a retro feel, wi
 
 ![Biscuit no input error alert](assets/images/readme-images/input-error.jpg)
 
-* If the ASCII value is too great for the equation an error alert will be generated asking the user to input a shorter word.
+* If the ASCII value is too great for the equation an error alert will be generated asking the user to input a shorter word. Technically the error is not related to length, but to numerical value, but the simplest way to communicate this error to the user is to ask for a shorter word as this will result in a smaller numerical value.
 
 ![Ascii ceiling error alert](assets/images/readme-images/ascii-error.jpg)
 
@@ -226,7 +226,9 @@ I sent the live link to friends and family members for testing and feedback. The
 
 I conducted manual testing and recorded the results as follows:
 
-![Manual testing spreadsheet]()
+![Manual testing spreadsheet large screens](assets/images/readme-images/manual-testing-large-viewports.jpg)
+
+![Manual testing spreadsheet small screens](assets/images/readme-images/manual-testing-small-viewports.jpg)
 
 ### User Stories Testing
 
@@ -282,7 +284,7 @@ As the owner of the site:
 
 *I want users to be able to easily generate and find names*
 
-* Two fun and easy modes for generating random names for multiple purposes. All errors caught by functions.
+* Two fun and easy modes for generating random names for multiple purposes. All errors caught by functions. 
 
 *I want to create a gender neutral site*
 
@@ -293,11 +295,20 @@ As the owner of the site:
 * Semantic HTML and aria labels used throughout site, and site tested for accessibility as per testing section.
 
 ### Debugging and known bugs
-tbc
 
-Known bugs
+### Debugging
 
-The code is set up so that when the name history reaches 6 entries, it will wait 4 seconds and then an alert will pop up, letting the reader know that the history will be erased. I added in this buffer because otherwise, in some browsers, the alert covers the name display immediately and that name can only be seen in the alert. The bug here is that if the user is speeding through, until the alert pops up they can continue to generate names. The names will still appear in the alert so I decided this is preferable to taking out the buffer. The user experience is not negatively affected by being able to generate an extra 2-4 names.
+This is the first site I have built with Javascript so there was a fair bit of debugging that ultimately had simple solutions (such as moving an object from local to global scope).
+
+Outside of this, primarily debugging happened in relation to the createNameHistory function. The goals were to get it to display vertically and not to display errors. Originally I just put the array in a new paragraph, but because this is a single object, I could not style it vertically using CSS. The best way seemed to be to put each name as a list item, which involves more code but looks much nicer to the user and is more pliable when it comes to CSS.
+
+I also did some refactoring for the startRoll function; it originally used the 'this' keyword in the function, which resulted in the enter key event listener having to call each of it's own functions individually, rather than just calling startRoll. I moved the use of 'this' up to the event listener and used that to give startRoll it's own parameter.
+
+### Known bugs
+
+The code is set up so that when the name history reaches 6 entries, it will wait 4 seconds and then an alert will pop up, letting the reader know that the history will be erased. I added in this buffer because otherwise, in some browsers, the alert covers the name display immediately and that name can only be seen in the alert. The bug here is that if the user is speeding through the game, until the alert pops up they can continue to generate names. The names will still appear in the alert so I decided this is preferable to taking out the buffer. The user experience is not negatively affected by being able to generate an extra 2-4 names.
+
+There is one console error when the Wildcard mode page loads; this is because the event listener for the enter key, which only applies to Biscuit Mode, has to have global scope to work properly. It seems to me that the solution for this would be to have the enter key event listener in it's own .js file that is only called on biscuit-mode.html, but as this is messy and the console error is not affecting the code or the user, I have left it in script.js .
 
 ### Deployment
 
@@ -335,5 +346,9 @@ Dice/D20 image - Pexel/Alexis Designs
 Code for sticky footer sourced from CSS Tricks - https://css-tricks.com/couple-takes-sticky-footer/*/
 
 Code for rotating the D20 dice adapted from Cloudinary - https://cloudinary.com/blog/rotating_images_in_javascript_three_quick_tutorials 
+
+### Acknowledgements
+
+Many thanks to my mentor Marantha Ilesanmi for his help and advice. Thanks also to my friend Cameron Chamberlain for his advice.
 
 ### Appendix
