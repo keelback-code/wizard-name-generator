@@ -193,9 +193,9 @@ Font Awesome - for the icons
 
 [CSS validator](https://jigsaw.w3.org/css-validator/) - passes with no errors or warnings
 
-[Accessibility validator](https://accessibilitytest.org/) - rating 
+[Accessibility validator](https://accessibilitytest.org/) - rating 97/100
 
-![Accessibility validator snip]()
+![Accessibility validator snip](assets/images/readme-images/accessibility-test.jpg)
 
 ### Browser Compatibility
 
@@ -214,7 +214,8 @@ Microsoft Edge - &#9745;
 ### Performance Testing
 
 Performance testing was conducted using [Lighthouse](https://developers.google.com/web/tools/lighthouse#devtools). The results are:
-![Lighthouse results]()
+
+![Lighthouse results](assets/images/readme-images/lighthouse-wng.jpg)
 
 ### Manual Testing
 
@@ -302,11 +303,11 @@ Outside of this, primarily debugging happened in relation to the createNameHisto
 
 I also did some refactoring for the startRoll function; it originally used the 'this' keyword in the function, which resulted in the enter key event listener having to call each of its own functions individually, rather than just calling startRoll. I moved the use of 'this' up to the event listener and used that to give startRoll it's own parameter.
 
+There was one console error when the Wildcard mode and landing pages loaded; this is because the event listener for the enter key, which only applies to Biscuit Mode, has to have global scope to work properly. The best solution that I could see was to have the enter key event listener in it's own .js file.
+
 ### Known bugs
 
 The code is set up so that when the name history reaches 6 entries, it will wait 4 seconds and then an alert will pop up, letting the reader know that the history will be erased. I added in this buffer because otherwise, in some browsers, the alert covers the name display immediately and that name can only be seen in the alert. The bug here is that if the user is speeding through the game, until the alert pops up they can continue to generate names. The names will still appear in the alert so I decided this is preferable to taking out the buffer. The user experience is not negatively affected by being able to generate an extra 2-4 names.
-
-There is one console error when the Wildcard mode page loads; this is because the event listener for the enter key, which only applies to Biscuit Mode, has to have global scope to work properly. It seems to me that the solution for this would be to have the enter key event listener in it's own .js file that is only called on biscuit-mode.html, but as this is messy and the console error is not affecting the code or the user, I have left it in script.js .
 
 ### Deployment
 
