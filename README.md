@@ -299,11 +299,11 @@ As the owner of the site:
 
 This is the first site I have built with Javascript so there was a fair bit of debugging that ultimately had simple solutions (such as moving an object from local to global scope).
 
-Outside of this, primarily debugging happened in relation to the createNameHistory function. The goals were to get it to display vertically and not to display errors. Originally I just put the array in a new paragraph, but because the array is a single object, I could not style it vertically using CSS. The best way seemed to be to put each name as a list item, which involves more code but looks much nicer to the user and is more pliable when it comes to CSS.
+Outside of this, primarily debugging happened in relation to the createNameHistory function. The goals were to get it to display vertically and not to display errors. Originally I put the array in a new paragraph, but because the array is a single object, I could not style it vertically using CSS. The best way seemed to be to put each name as a list item, which involves more code but looks much nicer to the user and is more pliable when it comes to CSS. Conditional checks were put in place to remove displaying errors.
 
-I also did some refactoring for the startRoll function; it originally used the 'this' keyword in the function, which resulted in the enter key event listener having to call each of its own functions individually, rather than just calling startRoll. I moved the use of 'this' up to the event listener and used that to give startRoll it's own parameter.
+I also did some refactoring for the startRoll function; it originally used the 'this' keyword in the function, which resulted in the enter key event listener having to call each of the Biscuit mode functions individually, rather than just calling startRoll. I moved the use of 'this' up to the event listener and used that to give startRoll it's own parameter.
 
-There was one console error when the Wildcard mode and landing pages loaded; this is because the event listener for the enter key, which only applies to Biscuit Mode, has to have global scope to work properly. The best solution that I could see was to have the enter key event listener in it's own .js file.
+There was one console error when the Wildcard mode and landing pages loaded; this is because the event listener for the enter key, which only applies to Biscuit Mode, has to have global scope to work properly and was originally in script.js. The best solution that I could see was to have the enter key event listener in it's own .js file.
 
 ### Known bugs
 
@@ -349,5 +349,3 @@ Code for rotating the D20 dice adapted from Cloudinary - https://cloudinary.com/
 ### Acknowledgements
 
 Many thanks to my mentor Marantha Ilesanmi for his help and advice. Thanks also to my friend Cameron Chamberlain for his advice.
-
-### Appendix
