@@ -37,7 +37,7 @@ The site and names are deliberately gender-neutral, because wizards have no need
 
 The live link is:
 
-[Wizard Name Generator](https://elyserh.github.io/wizard-name-generator/index.html)
+[Wizard Name Generator](https://keelback-code.github.io/wizard-name-generator/)
 
 Screenshot of Biscuit Mode page
 
