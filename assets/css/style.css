@@ -96,7 +96,8 @@ footer {
 }
 
 .nav-bar li {
-    padding: 20px;
+    padding: 10px;
+    padding-top: 20px;
 }
 
 .active {
@@ -234,7 +235,7 @@ button img {
     }
 
     .site-header li {
-        margin-right: 15px;
+        text-align: center;
     }
 
     .mode-header-text {
