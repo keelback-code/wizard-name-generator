@@ -6,7 +6,7 @@
 
 a {
     text-decoration: none;
-    color: black;
+    color: antiquewhite;
 }
 
 a:hover,
@@ -32,6 +32,7 @@ footer li {
 html,
 body {
     height: 100%;
+    background-color: black;
 }
 
 body {
@@ -44,6 +45,7 @@ body {
 .site-header,
 .game-container {
     flex: 1 0 auto;
+    color: antiquewhite;
 }
 
 footer {
@@ -117,6 +119,7 @@ footer {
 
 .name-display {
     font-size: 1.5em;
+    color: antiquewhite;
 }
 
 button {
@@ -134,6 +137,7 @@ button img {
     display: flex;
     flex-direction: column-reverse;
     margin-right: 40px;
+    color: antiquewhite;
 }
 
 .fa-angle-double-down {
@@ -145,24 +149,29 @@ button img {
 .roll h3,
 .name-printout h4 {
     font-size: 1.25em;
+    color: antiquewhite;
 }
 
 .name-history h5 {
     font-size: 1.2em;
+    color: antiquewhite;
 }
 
 .biscuit-input a {
     text-decoration: underline;
+    color: antiquewhite;
 }
 
 /* Styling for Wildcard Mode page only*/
 
 .name-printout h3 {
     font-size: 1.25em;
+    color: antiquewhite;
 }
 
 .name-history h4 {
     font-size: 1.2em;
+    color: antiquewhite;
 }
 
 /*Media queries*/
