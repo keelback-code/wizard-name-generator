@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Gender Neutral Wizard Name Generator">
+    <meta name="keywords" content="wizard name generator, name generator, wizards, fantasy, d&d name generator">
+    <link rel="stylesheet" href="assets/css/style.css">
+    <title>Gender Neutral Wizard Name Generator</title>
+</head>
+
+<body>
+    <div class="site-header">
+        <div class="mode-header-text">
+            <a href="index.html">
+                <h1>Wizard Name Generator</h1>
+            </a>
+        </div>
+
+        <nav class="nav-bar">
+            <ul>
+                <li>
+                    <a href="biscuit-mode.html">Biscuit Mode</a>
+                </li>
+                <li>
+                    <a href="wildcard-mode.html" class="active">Wildcard Mode</a>
+                </li>
+                <li>
+                    <a href="nonsense-mode.html" class="active">Nonsense Mode</a>
+                </li>
+            </ul>
+        </nav>
+    </div>
+
+    <div class="game-container">
+        <div class="roll">
+            <h2>Roll the Dice!</h2>
+            <button data-roll-type="nonsense">
+                <img src="assets/images/d20-bw.png" alt="A D20 dice; click to roll!">
+            </button>
+        </div>
+
+        <div class="name-printout">
+            <h3>Your new name is:</h3>
+            <p id="nonsense-result-syllable-one" class="name-display"></p>
+            <p id="nonsense-result-syllable-two" class="name-display"></p>
+        </div>
+
+        <div class="name-history">
+            <h4>Name history <i class="fas fa-angle-double-down"></i></h4>
+            <ul class="name-history-storage"></ul>
+        </div>
+    </div>
+
+    <footer>
+        <ul>
+            <li>
+                <a href="https://myspace.com/" target="_blank" rel="noopener"
+                    aria-label="Visit our Myspace page; opens in a new tab"><i class="fas fa-user-astronaut"></i></a>
+            </li>
+            <li>
+                <a href="https://www.deviantart.com/" target="_blank" rel="noopener"
+                    aria-label="Visit our Deviantart page; opens in a new tab"><i class="fab fa-deviantart"></i></a>
+            </li>
+            <li>
+                <a href="https://www.livejournal.com/" target="_blank" rel="noopener"
+                    aria-label="Visit our Livejournal page; opens in a new tab"><i class="fas fa-pencil-alt"></i></a>
+            </li>
+        </ul>
+    </footer>
+
+    <script src="assets/js/script.js"></script>
+    <script src="https://kit.fontawesome.com/a332586675.js" crossorigin="anonymous"></script>
+</body>
+
+</html>

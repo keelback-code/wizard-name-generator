@@ -35,6 +35,10 @@ function startRoll(rollType) {
         wildcardRoll();
         createNameHistory();
         setTimeout(resetNameHistory, 4000);
+    } else if (rollType === "nonsense") {
+        nonsenseRoll();
+        createNameHistory();
+        setTimeout(resetNameHistory, 4000);
     } else {
         alert(`Unknown roll.`);
         throw `Unknown roll.`;
@@ -103,6 +107,18 @@ function wildcardRoll() {
 
     document.getElementById("first-name-result-wildcard").textContent = `${(wizardFirstNames[wildNum1])}`;
     document.getElementById("last-name-result-wildcard").textContent = `${(wizardLastNames[wildNum2])}`;
+}
+
+/**
+ * Function to calculate Nonsense roll
+ */
+function nonsenseRoll() {
+
+    const nonsenseNum1 = Math.floor(Math.random() * nonsenseSyllableOne.length);
+    const nonsenseNum2 = Math.floor(Math.random() * nonsenseSyllableTwo.length);
+
+    document.getElementById("nonsense-result-syllable-one").textContent = `${(nonsenseSyllableOne[nonsenseNum1])}`;
+    document.getElementById("nonsense-result-syllable-two").textContent = `${(nonsenseSyllableTwo[nonsenseNum2])}`;
 }
 
 /**
